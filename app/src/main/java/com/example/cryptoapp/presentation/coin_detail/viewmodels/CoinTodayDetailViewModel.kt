@@ -1,4 +1,4 @@
-package com.example.cryptoapp.presentation.coin_detail
+package com.example.cryptoapp.presentation.coin_detail.viewmodels
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.cryptoapp.common.Constants
 import com.example.cryptoapp.common.Resource
 import com.example.cryptoapp.domain.use_cases.get_coin.GetCoinTodayUseCase
-import com.example.cryptoapp.presentation.coin_detail.components.CoinTodayState
+import com.example.cryptoapp.presentation.coin_detail.components.states.CoinTodayState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

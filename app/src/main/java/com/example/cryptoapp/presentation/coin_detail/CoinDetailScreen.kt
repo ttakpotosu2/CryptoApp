@@ -33,14 +33,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.SubcomposeAsyncImage
-import com.example.cryptoapp.data.remote.dto.TeamMember
+import com.example.cryptoapp.presentation.coin_detail.components.CoinDetailTabs
+import com.example.cryptoapp.presentation.coin_detail.components.CoinTag
 import com.example.cryptoapp.presentation.coin_detail.components.DetailScreenPriceTab
+import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinDetailViewModel
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun CoinDetailScreen(
     coinDetailViewModel: CoinDetailViewModel = hiltViewModel()
-    ) {
+) {
     val coinDetailState = coinDetailViewModel.state.value
 
     Box(
@@ -49,81 +51,77 @@ fun CoinDetailScreen(
             .background(Color(0xFF1C1B1F))
     ) {
         coinDetailState.coin?.let { coin ->
-            LazyColumn(
+            Column(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(16.dp)
             ) {
-                item {
-                    Text(
-                        text = coin.symbol, style = TextStyle(fontSize = 60.sp, color = White)
+                Text(
+                    text = coin.symbol, style = TextStyle(fontSize = 60.sp, color = White)
+                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    SubcomposeAsyncImage(
+                        model = coin.logo,
+                        loading = {
+                            CircularProgressIndicator(color = White)
+                        },
+                        contentDescription = "coin logo",
+                        modifier = Modifier.size(20.dp),
+                        alignment = Center,
+                        contentScale = ContentScale.Crop
                     )
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(6.dp)
-                    ) {
-                        SubcomposeAsyncImage(
-                            model = coin.logo,
-                            loading = {
-                                CircularProgressIndicator(color = White)
-                            },
-                            contentDescription = "coin logo",
-                            modifier = Modifier.size(20.dp),
-                            alignment = Center,
-                            contentScale = ContentScale.Crop
-                        )
-                        coin.name?.let {
-                            Text(
-                                text = it,
-                                style = TextStyle(fontSize = 30.sp, color = White)
-                            )
-                        }
+                    coin.name?.let {
                         Text(
-                            text = "#"+coin.rank.toString(),
-                            color = White,
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(6.dp))
-                                .background(Color(0xff434346))
-                                .padding(horizontal = 4.dp),
-                            fontSize = 14.sp
-                        )
-                        Text(
-                            text = if (coin.isActive == true) "active" else "inactive",
-                            color = White,
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(6.dp))
-                                .background(Color(if (coin.isActive == true) 0xff294D2D else 0xff4D2929))
-                                .padding(horizontal = 6.dp),
-                            fontSize = 14.sp
+                            text = it,
+                            style = TextStyle(fontSize = 30.sp, color = White)
                         )
                     }
-                    Spacer(modifier = Modifier.height(15.dp))
-                    FlowRow(
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalArrangement = Arrangement.spacedBy(6.dp),
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        coin.tags?.forEach{ tag ->
-                            CoinTag(tag = tag)
-                        }
+                    Text(
+                        text = "#" + coin.rank.toString(),
+                        color = White,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(6.dp))
+                            .background(Color(0xff434346))
+                            .padding(horizontal = 4.dp),
+                        fontSize = 14.sp
+                    )
+                    Text(
+                        text = if (coin.isActive == true) "active" else "inactive",
+                        color = White,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(6.dp))
+                            .background(Color(if (coin.isActive == true) 0xff294D2D else 0xff4D2929))
+                            .padding(horizontal = 6.dp),
+                        fontSize = 14.sp
+                    )
+                }
+                Spacer(modifier = Modifier.height(15.dp))
+                FlowRow(
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    coin.tags?.forEach { tag ->
+                        CoinTag(tag = tag)
                     }
-                    Spacer(modifier = Modifier.height(15.dp))
-                    DetailScreenPriceTab()
-
-                    Row(
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Button(onClick = { /*TODO*/ }) {
-                            Text(text = "Sell")
-                        }
-                        Button(onClick = { /*TODO*/ }) {
-                            Text(text = "Buy")
-                        }
+                }
+                Spacer(modifier = Modifier.height(15.dp))
+                CoinDetailTabs()
+                Row(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Button(onClick = { /*TODO*/ }) {
+                        Text(text = "Sell")
+                    }
+                    Button(onClick = { /*TODO*/ }) {
+                        Text(text = "Buy")
                     }
                 }
             }
-
         }
         if (coinDetailState.error.isNotBlank()) {
             Text(
@@ -141,23 +139,5 @@ fun CoinDetailScreen(
                 color = White
             )
         }
-    }
-}
-
-@Composable
-fun CoinTag(
-    tag: String
-) {
-    Box(
-        modifier = Modifier
-            .clip(RoundedCornerShape(4.dp))
-            .background(Color(0xff817F7F))
-            .padding(3.dp)
-    ) {
-        Text(
-            text = tag,
-            color = White,
-            textAlign = TextAlign.Center
-        )
     }
 }

@@ -1,6 +1,7 @@
 package com.example.cryptoapp.data.remote.dto
 
 
+import com.example.cryptoapp.domain.model.CoinMarket
 import com.google.gson.annotations.SerializedName
 
 data class CoinMarketDto(
@@ -31,3 +32,23 @@ data class CoinMarketDto(
     @SerializedName("trust_score")
     val trustScore: String
 )
+
+fun CoinMarketDto.toCoinMarket(): CoinMarket {
+    return CoinMarket(
+        adjustedVolume24hShare,
+        baseCurrencyId,
+        baseCurrencyName,
+        category,
+        exchangeId,
+        exchangeName,
+        feeType,
+        lastUpdated,
+        marketUrl,
+        outlier,
+        pair,
+        quoteCurrencyId,
+        quoteCurrencyName,
+        quotes,
+        trustScore
+    )
+}

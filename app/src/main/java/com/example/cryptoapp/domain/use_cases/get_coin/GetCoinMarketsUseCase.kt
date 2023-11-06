@@ -1,9 +1,10 @@
 package com.example.cryptoapp.domain.use_cases.get_coin
 
 import com.example.cryptoapp.common.Resource
-import com.example.cryptoapp.data.remote.dto.TodayDto
-import com.example.cryptoapp.domain.model.CoinDetail
-import com.example.cryptoapp.domain.model.Today
+import com.example.cryptoapp.data.remote.dto.CoinMarketDto
+import com.example.cryptoapp.data.remote.dto.toCoinMarket
+import com.example.cryptoapp.domain.model.CoinMarket
+import com.example.cryptoapp.domain.model.CoinTicker
 import com.example.cryptoapp.domain.repository.CoinRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -13,15 +14,15 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
-class GetCoinTodayUseCase @Inject constructor(
+class GetCoinMarketsUseCase @Inject constructor(
     private val repository: CoinRepository
 ) {
 
-    operator fun invoke(coinId: String): Flow<Resource<List<Today>>> = flow {
+    operator fun invoke(coinId: String): Flow<Resource<List<CoinMarket>>> = flow {
         try {
             emit(Resource.Loading())
-            val coinToday = repository.getCoinToday(coinId).map { it.toToday() }
-            emit(Resource.Success(coinToday))
+            val coinMarkets = repository.getCoinMarkets(coinId).map { it.toCoinMarket() }
+            emit(Resource.Success(coinMarkets))
         } catch (e: HttpException){
             emit(Resource.Error(e.localizedMessage ?: "An Error Occurred!"))
         } catch (e: IOException){

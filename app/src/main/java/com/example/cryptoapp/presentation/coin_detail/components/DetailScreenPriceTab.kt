@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -19,16 +20,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import co.yml.charts.common.utils.DataUtils
-import com.example.cryptoapp.presentation.coin_detail.CoinDetailViewModel
-import com.example.cryptoapp.presentation.coin_detail.CoinTickerViewModel
-import com.example.cryptoapp.presentation.coin_detail.components.ycharts.SingleLineChart
+import com.example.cryptoapp.presentation.coin_detail.components.charts.CanvasChart
+import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinTickerViewModel
+//import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinTodayDetailViewModel
 
 @Composable
 fun DetailScreenPriceTab(
     coinTickerViewModel: CoinTickerViewModel = hiltViewModel(),
+//    coinTodayViewModel: CoinTodayDetailViewModel = hiltViewModel(),
 ) {
     val coinTickerState = coinTickerViewModel.state.value
+//    val coinTodayState = coinTodayViewModel.state.value
+
     Column(
         modifier = Modifier
             .clip(RoundedCornerShape(16.dp))
@@ -36,6 +39,23 @@ fun DetailScreenPriceTab(
             .padding(12.dp)
     ) {
         val coinTicker = coinTickerState.coinTicker
+//        val coinToday = coinTodayState.coinToday
+
+        val tickerPercentageChange = listOf(
+            coinTicker?.quotes?.usd?.percentChange15m,
+            coinTicker?.quotes?.usd?.percentChange30m,
+            coinTicker?.quotes?.usd?.percentChange1h,
+            coinTicker?.quotes?.usd?.percentChange6h,
+            coinTicker?.quotes?.usd?.percentChange12h,
+            coinTicker?.quotes?.usd?.percentChange24h,
+            coinTicker?.quotes?.usd?.percentChange7d,
+            coinTicker?.quotes?.usd?.percentChange30d,
+            coinTicker?.quotes?.usd?.percentChange1y
+        )
+        val floatListOfTickerPercentageChange = tickerPercentageChange.map { it!!.toFloat() }
+
+        //TODO: Add the Low and High Today Values
+
         Row(
             verticalAlignment = Alignment.Bottom
         ) {
@@ -61,11 +81,15 @@ fun DetailScreenPriceTab(
                 )
             }
         }
-        val pointsData = DataUtils.getLineChartData(listSize = 15, maxRange = 300)
 
-        SingleLineChart(
-            pointData = pointsData
+        CanvasChart(
+            list = floatListOfTickerPercentageChange,
+            modifier = Modifier.fillMaxWidth().height(100.dp)
         )
+//        val pointsData = DataUtils.getLineChartData(listSize = 15, maxRange = 300)
+//        SingleLineChart(
+//            pointData = pointsData
+//        )
         MarketsInfo(label = "Markets", data = coinTicker?.quotes?.usd?.marketCap.toString())
         Spacer(modifier = Modifier.height(6.dp))
         MarketsInfo(label = "Total Supply", data = coinTicker?.totalSupply.toString())
