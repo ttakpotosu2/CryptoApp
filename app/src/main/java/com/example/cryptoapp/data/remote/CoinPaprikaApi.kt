@@ -1,7 +1,7 @@
 package com.example.cryptoapp.data.remote
 
 import com.example.cryptoapp.data.remote.dto.CoinDetailDto
-import com.example.cryptoapp.data.remote.dto.CoinEvents
+import com.example.cryptoapp.data.remote.dto.CoinEventsDto
 import com.example.cryptoapp.data.remote.dto.CoinMarketDto
 import com.example.cryptoapp.data.remote.dto.CoinTickerDto
 import com.example.cryptoapp.data.remote.dto.CoinsDto
@@ -26,5 +26,5 @@ interface CoinPaprikaApi {
     suspend fun getCoinMarkets(@Path("coinId") coinId: String): List<CoinMarketDto>
 
     @GET("/v1/coins/{coinId}/events")
-    suspend fun getCoinEvents(@Path("coinId") coinId: String): List<CoinEvents>
+    suspend fun getCoinEvents(@Path("coinId") coinId: String): List<CoinEventsDto>
 }

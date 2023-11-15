@@ -11,18 +11,18 @@ import androidx.compose.ui.graphics.Color
 @Composable
 fun CanvasChart(
     modifier: Modifier = Modifier,
-    list: List<Float>
+    list: List<Float?>
 ) {
     val zippedList: List<Pair<Float?, Float?>> = list.zipWithNext()
 
     Row (modifier = modifier){
-        val max = list.max()
-        val min = list.min()
+        val max = list.maxOfOrNull { it?: Float.MAX_VALUE }
+        val min = list.maxOfOrNull { it ?: Float.MIN_VALUE }
 
-        val lineColor = if (list.last() > list.first()) Color.Green else Color.Red
+        val lineColor = if (list.last()!! > list.first()!!) Color.Green else Color.Red
 
-        fun getValuePercentageForRange(value: Float, max: Float, min: Float) =
-            (value - min) / (max - min)
+        fun getValuePercentageForRange(value: Float?, max: Float?, min: Float?) =
+            (min?.let { value?.minus(it) })?.div((max?.minus(min)!!))
 
         for (pair in zippedList){
 
@@ -46,3 +46,28 @@ fun CanvasChart(
         }
     }
 }
+
+//@Composable
+//fun CanvasChart(
+//    modifier: Modifier = Modifier,
+//    list: List<Float?>
+//) {
+//    val zippedList = list.zipWithNext()
+//
+//    val max = list.maxOfOrNull { it ?: 1f }
+//    val min = list.minOfOrNull { it ?: 0f }
+//
+//    val lineColor = if (list.last()!! > list.first()!!) Color.Green else Color.Red
+//
+//    Canvas(modifier = modifier) {
+//        for ((fromValue, toValue) in zippedList) {
+//            val fromPercentage = fromValue?.let { (it - min!!) / (max!! - min) } ?: 0f
+//            val toPercentage = toValue?.let { (it - min!!) / (max!! - min) } ?: 0f
+//
+//            val fromPoint = Offset(x = 0f, y = size.height * (1 - fromPercentage))
+//            val toPoint = Offset(x = size.width, y = size.height * (1 - toPercentage))
+//
+//            drawLine(color = lineColor, start = fromPoint, end = toPoint, strokeWidth = 3f)
+//        }
+//    }
+//}

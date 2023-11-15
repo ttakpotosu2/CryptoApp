@@ -101,4 +101,7 @@ dependencies {
 
     //Y Charts
     implementation("co.yml:ycharts:2.1.0")
+
+    // Shimmer
+    implementation("com.valentinilk.shimmer:compose-shimmer:1.2.0")
 }
