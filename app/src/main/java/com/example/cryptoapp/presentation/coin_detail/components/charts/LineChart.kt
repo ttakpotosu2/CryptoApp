@@ -27,13 +27,15 @@ fun SingleLineChart(
 ) {
     val steps = pointData.size
     val xAxisData = AxisData.Builder()
-        .axisStepSize(20.dp)
-        .axisLineColor(Color.White)
-        .steps(steps - 1)
+        .steps(steps)
+        .backgroundColor(Color.White)
+        .labelAndAxisLinePadding(0.dp)
         .build()
 
     val yAxisData = AxisData.Builder()
         .steps(steps)
+        .backgroundColor(Color.White)
+        .labelAndAxisLinePadding(0.dp)
         .build()
 
     val lineChartData = LineChartData(
@@ -52,6 +54,8 @@ fun SingleLineChart(
         xAxisData = xAxisData,
         yAxisData = yAxisData,
         isZoomAllowed = false,
+        backgroundColor = Color.White,
+        containerPaddingEnd = 0.dp
     )
     LineChart(
         modifier = modifier,
