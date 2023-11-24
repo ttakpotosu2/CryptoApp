@@ -11,15 +11,15 @@ import androidx.compose.ui.graphics.Color
 @Composable
 fun CanvasChart(
     modifier: Modifier = Modifier,
-    list: List<Float?>
+    list: List<Float>
 ) {
     val zippedList: List<Pair<Float?, Float?>> = list.zipWithNext()
 
     Row (modifier = modifier){
-        val max = list.maxOfOrNull { it?: Float.MAX_VALUE }
-        val min = list.maxOfOrNull { it ?: Float.MIN_VALUE }
+        val max = list.max()
+        val min = list.min()
 
-        val lineColor = if (list.last()!! > list.first()!!) Color.Green else Color.Red
+        val lineColor = if (list.last() > list.first()) Color.Green else Color.Red
 
         fun getValuePercentageForRange(value: Float?, max: Float?, min: Float?) =
             (min?.let { value?.minus(it) })?.div((max?.minus(min)!!))

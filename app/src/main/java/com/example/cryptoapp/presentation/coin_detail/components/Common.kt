@@ -30,7 +30,6 @@ import com.example.cryptoapp.domain.model.CoinMarket
 import com.example.cryptoapp.domain.model.Coins
 import com.example.cryptoapp.presentation.ui.theme.Kadwa
 
-
 @Composable
 fun MarketsInfo(
     label: String,
@@ -43,7 +42,7 @@ fun MarketsInfo(
             text = label,
             style = TextStyle(
                 color = Color.White,
-                fontSize = 24.sp
+                fontSize = 16.sp
             )
         )
         Spacer(modifier = Modifier.weight(1f))
@@ -51,7 +50,7 @@ fun MarketsInfo(
             text = "$$data",
             style = TextStyle(
                 color = Color.White,
-                fontSize = 24.sp
+                fontSize = 16.sp
             )
         )
     }
