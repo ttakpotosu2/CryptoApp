@@ -23,12 +23,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.cryptoapp.presentation.ui.theme.Monorama
 
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun CoinDetailTabs(
-) {
+fun CoinDetailTabs() {
     var tabIndex by remember { mutableIntStateOf(0) }
     val tabs = listOf("About", "Markets", "Events")
     val pagerState = rememberPagerState { tabs.size }
@@ -41,9 +41,7 @@ fun CoinDetailTabs(
             tabIndex = pagerState.currentPage
         }
     }
-    Column(
-        modifier = Modifier.clip(RoundedCornerShape(12.dp))
-    ) {
+    Column {
         TabRow(
             selectedTabIndex = tabIndex,
             divider = {}
@@ -57,21 +55,17 @@ fun CoinDetailTabs(
                             text = title,
                             style = TextStyle(
                                 fontSize = 28.sp,
-                                color = if (tabIndex == index) { Color.Black } else Color.Black.copy(0.3f)
-                            ),
-                            modifier = Modifier.padding(4.dp)
+                                color = if (tabIndex == index) { Color.Black } else Color.Black.copy(0.3f),
+                                fontFamily = Monorama
+                            )
                         )
-                    },
-                    modifier = Modifier.background(Color.White),
-                    selectedContentColor = Color.Blue,
-                    unselectedContentColor = Color.Green
+                    }
                 )
             }
         }
         HorizontalPager(
             state = pagerState,
-            modifier = Modifier
-                .fillMaxWidth()
+            modifier = Modifier.fillMaxWidth()
         ) { index ->
             when(index){
                 0 -> { DetailScreenAboutTab() }

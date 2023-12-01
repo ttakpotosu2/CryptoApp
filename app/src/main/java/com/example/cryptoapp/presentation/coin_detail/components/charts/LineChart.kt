@@ -30,6 +30,7 @@ fun SingleLineChart(
         .steps(steps)
         .backgroundColor(Color.White)
         .labelAndAxisLinePadding(0.dp)
+        .axisLineColor(Color.White)
         .build()
 
     val yAxisData = AxisData.Builder()
@@ -44,9 +45,9 @@ fun SingleLineChart(
                 Line(
                     dataPoints = pointData,
                     lineStyle = LineStyle(
-                        color = Color(0xff1E60DF),
+                        color = Color.Black,
                         lineType = LineType.SmoothCurve(),
-                        width = 5f
+                        width = 3f
                     )
                 )
             )
@@ -55,7 +56,11 @@ fun SingleLineChart(
         yAxisData = yAxisData,
         isZoomAllowed = false,
         backgroundColor = Color.White,
-        containerPaddingEnd = 0.dp
+        containerPaddingEnd = 0.dp,
+        gridLines = GridLines(
+            enableHorizontalLines = false,
+            enableVerticalLines = true,
+        )
     )
     LineChart(
         modifier = modifier,

@@ -104,4 +104,7 @@ dependencies {
 
     // Shimmer
     implementation("com.valentinilk.shimmer:compose-shimmer:1.2.0")
+
+    //Splashscreen
+    implementation("androidx.core:core-splashscreen:1.0.1")
 }

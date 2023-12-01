@@ -1,9 +1,12 @@
 package com.example.cryptoapp.presentation.coin_detail.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,7 +17,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -29,10 +34,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import co.yml.charts.common.utils.DataUtils
 import coil.compose.SubcomposeAsyncImage
+import com.example.cryptoapp.presentation.coin_detail.components.charts.SingleLineChart
 import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinDetailViewModel
 import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinTickerViewModel
+import com.example.cryptoapp.presentation.ui.medium
+import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
+import com.example.cryptoapp.presentation.ui.theme.Monorama
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun DetailScreenAboutTab(
     coinTickerViewModel: CoinTickerViewModel = hiltViewModel(),
@@ -40,75 +51,76 @@ fun DetailScreenAboutTab(
 ) {
     val coinTickerState = coinTickerViewModel.state.value
     val coinDetailState = coinDetailViewModel.state.value
+    val pointsData = DataUtils.getLineChartData(listSize = 13, maxRange = 30)
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .padding(12.dp),
+            .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.Top
     ) {
-        val coinTicker = coinTickerState.coinTicker
+
         val coinDetail = coinDetailState.coin
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            Column(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(Color.Blue)
-                    .padding(12.dp)
-                    .weight(2f)
-            ) {
-                MarketsInfo(label = "Markets", data = coinTicker?.quotes?.usd?.marketCap.toString())
-                Spacer(modifier = Modifier.height(6.dp))
-                MarketsInfo(label = "Total Supply", data = coinTicker?.totalSupply.toString())
-                Spacer(modifier = Modifier.height(6.dp))
-                MarketsInfo(
-                    label = "In Circulation",
-                    data = coinTicker?.circulatingSupply.toString()
-                )
-                Spacer(modifier = Modifier.height(6.dp))
-                MarketsInfo(label = "Total volumes", data = coinTicker?.maxSupply.toString())
-            }
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(Color.LightGray.copy(alpha = 0.25f))
-                    .height(110.dp)
-            ) {
-                if (coinDetail != null) {
-                    SubcomposeAsyncImage(
-                        model = coinDetail.logo,
-                        contentDescription = null,
-                        contentScale = ContentScale.Fit,
-                        modifier = Modifier.fillMaxSize(),
-                        colorFilter = ColorFilter.tint(Color.Black)
-                    )
-                }
-            }
-        }
+        SingleLineChart(
+            pointData = pointsData,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(150.dp)
+        )
+        val coinTicker = coinTickerState.coinTicker
+
+        MarketsInfo(label = "Markets", data = coinTicker?.quotes?.usd?.marketCap.toString())
+        Spacer(modifier = Modifier.height(6.dp))
+        MarketsInfo(label = "Total Supply", data = coinTicker?.totalSupply.toString())
+        Spacer(modifier = Modifier.height(6.dp))
+        MarketsInfo(
+            label = "In Circulation",
+            data = coinTicker?.circulatingSupply.toString()
+        )
+        Spacer(modifier = Modifier.height(6.dp))
+        MarketsInfo(label = "Total volumes", data = coinTicker?.maxSupply.toString())
+
         if (coinDetail != null) {
             coinDetail.description?.let {
                 Spacer(modifier = Modifier.height(6.dp))
                 Text(
-                    text = it, color = Color.Black
+                    text = it,
+                    style = TextStyle(
+                        color = Color.Black,
+                        fontFamily = Chakrapetch,
+                        fontWeight = FontWeight.Light,
+                        fontSize = 18.sp
+                    ),
+
                 )
             }
         }
-        Spacer(modifier = Modifier.height(12.dp))
-        Text(text = "Team Members")
-        Spacer(modifier = Modifier.height(6.dp))
-        LazyColumn(
-            modifier = Modifier.fillMaxSize()
+        Spacer(modifier = Modifier.height(medium))
+        FlowRow(
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+            modifier = Modifier.fillMaxWidth()
         ) {
             if (coinDetail != null) {
-                items(coinDetail.team) {
-                    TeamListItem(teamMember = it)
+                coinDetail.tags?.forEach { tag ->
+                    CoinTag(tag = tag)
                 }
             }
+        }
+        Spacer(modifier = Modifier.height(medium))
+        Text(
+            text = "Team Members",
+            style = TextStyle(
+                fontSize = 22.sp,
+                fontWeight = FontWeight.Bold,
+                fontFamily = Monorama
+            )
+        )
+        Spacer(modifier = Modifier.height(6.dp))
+        coinDetail?.team?.forEach {
+            TeamListItem(teamMember = it)
+            Spacer(modifier = Modifier.height(medium))
         }
     }
 }

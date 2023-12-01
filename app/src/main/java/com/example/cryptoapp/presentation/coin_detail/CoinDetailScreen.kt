@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -19,6 +20,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
 import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,6 +32,7 @@ import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
@@ -42,12 +45,20 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import co.yml.charts.common.extensions.isNotNull
 import co.yml.charts.common.utils.DataUtils
 import coil.compose.SubcomposeAsyncImage
+import com.example.cryptoapp.presentation.bottomNavBar.CryptoAppBottomNavBar
 import com.example.cryptoapp.presentation.coin_detail.components.CoinDetailTabs
 import com.example.cryptoapp.presentation.coin_detail.components.CoinTag
 import com.example.cryptoapp.presentation.coin_detail.components.charts.SingleLineChart
 import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinDetailViewModel
 import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinTickerViewModel
+import com.example.cryptoapp.presentation.ui.big
+import com.example.cryptoapp.presentation.ui.medium
+import com.example.cryptoapp.presentation.ui.small
+import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
 import com.example.cryptoapp.presentation.ui.theme.Kadwa
+import com.example.cryptoapp.presentation.ui.theme.Monorama
+import com.example.cryptoapp.presentation.ui.veryBig
+import com.example.cryptoapp.presentation.ui.veryLarge
 import com.valentinilk.shimmer.shimmer
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -58,89 +69,88 @@ fun CoinDetailScreen(
 ) {
     val coinTickerState = coinTickerViewModel.state.value
     val coinDetailState = coinDetailViewModel.state.value
-    val pointsData = DataUtils.getLineChartData(listSize = 9, maxRange = 300)
+
 
     if (coinDetailState.coin.isNotNull()) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color(0xFF1C1B1F))
-                .padding(8.dp)
-        ) {
-            coinDetailState.coin?.let { coin ->
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    val coinTicker = coinTickerState.coinTicker
-                    Column(
-                        modifier = Modifier
-                            .weight(1f)
-                            .clip(RoundedCornerShape(12.dp))
-                            .background(White)
-                            .padding(12.dp),
-                        verticalArrangement = Arrangement.Top
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.Top,
-                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+        Scaffold(
+            bottomBar = {
+                Divider(thickness = 1.dp, color = Black)
+                CryptoAppBottomNavBar(
+                    modifier = Modifier
+                        .height(80.dp)
+                        .padding(horizontal = big, vertical = small)
+                )
+            }
+        ) { paddingValues ->
+            val coinTicker = coinTickerState.coinTicker
 
-                            ) {
-                            SubcomposeAsyncImage(
-                                model = coin.logo,
-                                loading = { CircularProgressIndicator(color = White) },
-                                contentDescription = "coin logo",
-                                modifier = Modifier.size(50.dp),
-                                alignment = Center,
-                                contentScale = ContentScale.Crop
-                            )
-                            Spacer(modifier = Modifier.weight(1f))
-                            Text(
-                                text = "#" + coin.rank.toString(),
-                                color = White,
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(6.dp))
-                                    .background(Color(0xff434346))
-                                    .padding(horizontal = 4.dp),
-                                fontSize = 14.sp
-                            )
-                            Text(
-                                text = if (coin.isActive == true) "active" else "inactive",
-                                color = White,
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(6.dp))
-                                    .background(Color(if (coin.isActive == true) 0xff294D2D else 0xff4D2929))
-                                    .padding(horizontal = 6.dp),
-                                fontSize = 14.sp
-                            )
-                        }
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    // .background(Color(0xFF1C1B1F))
+                    .padding(paddingValues)
+                    .padding(small)
+            ) {
+                coinDetailState.coin?.let { coin ->
+                    SubcomposeAsyncImage(
+                        model = coin.logo,
+                        loading = { CircularProgressIndicator(color = White) },
+                        contentDescription = "coin logo",
+                        modifier = Modifier.size(75.dp),
+                        alignment = Center,
+                        contentScale = ContentScale.Crop
+                    )
+                    Row(modifier = Modifier) {
                         Text(
                             text = coin.symbol,
-                            style = LocalTextStyle.current.copy(lineHeight = 2.sp),
-                            fontSize = 60.sp,
-                            color = Black
+                            style = TextStyle(
+                                fontSize = 80.sp,
+                                color = Black,
+                                fontFamily = Monorama
+                            )
                         )
-                        coin.name?.let {
+                        coin.name?.let { text ->
                             Text(
-                                text = it,
-                                style = TextStyle(fontSize = 30.sp, color = Black)
+                                text = "/$text",
+                                style = TextStyle(
+                                    fontSize = 36.sp,
+                                    color = Black,
+                                    fontFamily = Monorama
+                                ),
+                                modifier = Modifier.offset(y = 10.dp)
                             )
                         }
                     }
-                    Column(
+                    Text(
+                        text = "#" + coin.rank.toString(),
+                        style = TextStyle(
+                            color = White,
+                            fontSize = 14.sp,
+                            fontFamily = Chakrapetch
+                        ),
                         modifier = Modifier
-                            .weight(1f)
-                            .height(192.dp)
-                            .clip(RoundedCornerShape(12.dp))
-                            .background(White)
-                            .padding(6.dp)
-                    ) {
+                            .clip(RectangleShape)
+                            .background(Black)
+                            .padding(horizontal = 4.dp),
+                    )
+                    Text(
+                        text = if (coin.isActive == true) "active" else "inactive",
+                        style = TextStyle(
+                            color = Black,
+                            fontSize = 14.sp,
+                            fontFamily = Chakrapetch
+                        )
+
+                    )
+                    Row {
                         val price = coinTicker?.quotes?.usd?.price
                         val formattedPrice = String.format("%.2f", price).replace(",", ".")
                         Text(
                             text = "$ $formattedPrice",
                             style = TextStyle(
+                                fontFamily = Monorama,
                                 color = Black,
-                                fontSize = 26.sp,
+                                fontSize = 48.sp,
                                 fontWeight = FontWeight.Bold
                             )
                         )
@@ -151,43 +161,18 @@ fun CoinDetailScreen(
                                 text = "${figure}%",
                                 style = TextStyle(
                                     color = if (figure < 0) Color.Red else Color.Green,
-                                    fontSize = 18.sp
-                                )
+                                    fontSize = 18.sp,
+                                    fontFamily = Monorama
+                                ),
+                                modifier = Modifier.offset(y = 7.dp)
                             )
                         }
-                        SingleLineChart(
-                            pointData = pointsData,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(100.dp)
-                                .background(Color(0xff2C2A2A))
-                        )
-                        Divider()
-                        Row {
-                            Box(modifier = Modifier
-                                .height(100.dp)
-                                .background(Red))
-                            Box(modifier = Modifier
-                                .height(100.dp)
-                                .background(Blue))
-                        }
                     }
+                    Divider(color = Black, thickness = 1.dp)
+                    // Tabs
+                    CoinDetailTabs()
                 }
-                FlowRow(
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                    verticalArrangement = Arrangement.spacedBy(6.dp),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(12.dp)
-                ) {
-                    coin.tags?.forEach { tag ->
-                        CoinTag(tag = tag)
-                    }
-                }
-                CoinDetailTabs(
-                )
             }
-
         }
     }
     if (coinDetailState.error.isNotBlank()) {
@@ -204,11 +189,9 @@ fun CoinDetailScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color(0xFF1C1B1F))
                 .shimmer(),
             contentAlignment = Alignment.Center
         ) {
-            // Detail out shapes for loading shimmer
             Box(
                 modifier = Modifier
                     .size(94.dp)
@@ -216,6 +199,4 @@ fun CoinDetailScreen(
             )
         }
     }
-
-
 }
