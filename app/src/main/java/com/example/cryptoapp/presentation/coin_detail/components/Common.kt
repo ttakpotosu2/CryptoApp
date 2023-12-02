@@ -2,7 +2,6 @@ package com.example.cryptoapp.presentation.coin_detail.components
 
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
@@ -19,10 +18,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -43,7 +39,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
@@ -60,7 +55,6 @@ import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
 import com.example.cryptoapp.presentation.ui.theme.Monorama
-import com.example.cryptoapp.presentation.ui.ultraSmall
 import com.example.cryptoapp.presentation.ui.verySmall
 
 @Composable
