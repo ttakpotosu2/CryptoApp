@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -62,7 +63,7 @@ fun CoinsScreen(
 ) {
     Scaffold(
         bottomBar = {
-            Divider(thickness = 1.dp, color = Color.Black)
+            Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
             CryptoAppBottomNavBar(
                 modifier = Modifier
                     .height(80.dp)
@@ -76,7 +77,7 @@ fun CoinsScreen(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color.White)
+                    .background(MaterialTheme.colorScheme.background)
                     .padding(paddingValue)
                     .padding(small),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
@@ -94,7 +95,7 @@ fun CoinsScreen(
                         Text(
                             text = currentDate.format(formatter),
                             style = TextStyle(
-                                color = Color.Black,
+                                color = MaterialTheme.colorScheme.onBackground,
                                 fontFamily = Monorama,
                                 fontSize = 32.sp
                             )
@@ -102,7 +103,7 @@ fun CoinsScreen(
                         Text(
                             text = "Ghana",
                             style = TextStyle(
-                                color = Color.Black,
+                                color = MaterialTheme.colorScheme.onBackground,
                                 fontFamily = Monorama,
                                 fontSize = 18.sp
                             )
@@ -114,28 +115,30 @@ fun CoinsScreen(
                         contentDescription = null,
                         modifier = Modifier
                             .size(66.dp)
-                            .offset(x = 30.dp)
+                            .offset(x = 30.dp),
+                        colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onBackground)
                     )
                     Image(
                         painter = painterResource(id = R.drawable.arrow_up_right),
                         contentDescription = null,
-                        modifier = Modifier.size(66.dp)
+                        modifier = Modifier.size(66.dp),
+                        colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onBackground)
                     )
                 }
                 Text(
                     text = "CryptoApp",
                     style = TextStyle(
-                        color = Color.Black,
+                        color = MaterialTheme.colorScheme.onBackground,
                         fontSize = 68.sp,
                         fontFamily = Monorama
                     ),
                     modifier = Modifier
                         .padding(top = medium)
                 )
-                Divider(thickness = 1.dp, color = Color.Black)
+                Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
                 LazyColumn(
                     modifier = Modifier
-                        .background(Color.White),
+                        .background(MaterialTheme.colorScheme.background),
                     contentPadding = PaddingValues(none)
                 ) {
                     items(state.coins) { coin ->
@@ -146,7 +149,7 @@ fun CoinsScreen(
                         Spacer(modifier = Modifier.height(medium))
                     }
                 }
-                Divider(thickness = 1.dp, color = Color.Black)
+                Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
             }
         }
         if (state.error.isNotBlank()) {
@@ -163,7 +166,7 @@ fun CoinsScreen(
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color.White)
+                    .background(MaterialTheme.colorScheme.background)
                     .shimmer(),
                 contentAlignment = Alignment.Center
             ) {
@@ -175,18 +178,18 @@ fun CoinsScreen(
                         Box(
                             modifier = Modifier
                                 .size(height = 50.dp, width = 150.dp)
-                                .background(Color.Black)
+                                .background(MaterialTheme.colorScheme.onBackground)
                         )
                         Box(
                             modifier = Modifier
                                 .size(50.dp)
-                                .background(Color.Black)
+                                .background(MaterialTheme.colorScheme.onBackground)
                         )
                     }
                     Box(
                         modifier = Modifier
                             .size(height = 50.dp, width = 150.dp)
-                            .background(Color.Black)
+                            .background(MaterialTheme.colorScheme.onBackground)
                     )
                 }
             }

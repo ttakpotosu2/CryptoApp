@@ -2,7 +2,9 @@ package com.example.cryptoapp.presentation.coin_detail.components.charts
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -22,20 +24,18 @@ import coil.size.Size
 
 @Composable
 fun SingleLineChart(
-    pointData: List<Point>,
-    modifier: Modifier = Modifier
+    pointData: List<Point>
 ) {
     val steps = pointData.size
     val xAxisData = AxisData.Builder()
         .steps(steps)
-        .backgroundColor(Color.White)
+        .backgroundColor(color = Color.Transparent)
         .labelAndAxisLinePadding(0.dp)
-        .axisLineColor(Color.White)
+        .axisLineColor(MaterialTheme.colorScheme.background)
         .build()
 
     val yAxisData = AxisData.Builder()
         .steps(steps)
-        .backgroundColor(Color.White)
         .labelAndAxisLinePadding(0.dp)
         .build()
 
@@ -45,17 +45,18 @@ fun SingleLineChart(
                 Line(
                     dataPoints = pointData,
                     lineStyle = LineStyle(
-                        color = Color.Black,
+                        color = MaterialTheme.colorScheme.onBackground,
                         lineType = LineType.SmoothCurve(),
                         width = 3f
                     )
                 )
-            )
+            ),
+            plotType = PlotType.Line
         ),
         xAxisData = xAxisData,
         yAxisData = yAxisData,
         isZoomAllowed = false,
-        backgroundColor = Color.White,
+        backgroundColor = Color.Transparent,
         containerPaddingEnd = 0.dp,
         gridLines = GridLines(
             enableHorizontalLines = false,
@@ -63,7 +64,10 @@ fun SingleLineChart(
         )
     )
     LineChart(
-        modifier = modifier,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.background)
+            .height(150.dp),
         lineChartData = lineChartData
     )
 }

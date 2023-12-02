@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -24,15 +25,14 @@ fun OnBoardingButton(
     Button(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
-            contentColor = Color.White,
-            containerColor = Color.Black
+            containerColor = MaterialTheme.colorScheme.onBackground
         ),
         shape = RectangleShape
     ) {
         Text(
             text = text,
             style = TextStyle(
-                color = Color.White,
+                color = MaterialTheme.colorScheme.background,
                 fontFamily = Monorama
             )
         )
@@ -44,8 +44,8 @@ fun PageIndicator(
     modifier: Modifier = Modifier,
     pageSize: Int,
     selectedPage: Int,
-    selectedColor: Color = Color.Black,
-    unselectedColor: Color = Color.LightGray
+    selectedColor: Color = MaterialTheme.colorScheme.onBackground,
+    unselectedColor: Color = MaterialTheme.colorScheme.onBackground.copy(0.5f)
 ) {
     Row(
         modifier = modifier,
@@ -75,7 +75,7 @@ fun OnboardingNextButton(
         Text(
             text = text,
             style = TextStyle(
-                color = Color.Black,
+                color = MaterialTheme.colorScheme.onBackground,
                 fontFamily = Monorama
             )
         )

@@ -10,6 +10,7 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Divider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
@@ -21,6 +22,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -64,12 +66,13 @@ fun CryptoAppBottomNavBar(
                     Image(
                         imageVector = item.icon,
                         contentDescription = item.label,
-                        modifier = Modifier.size(30.dp)
+                        modifier = Modifier.size(30.dp),
+                        colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.onBackground)
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    unselectedIconColor = Color.White,
-                    selectedIconColor = Color.White
+                    unselectedIconColor = MaterialTheme.colorScheme.onBackground,
+                    selectedIconColor = MaterialTheme.colorScheme.onBackground,
                 )
             )
         }

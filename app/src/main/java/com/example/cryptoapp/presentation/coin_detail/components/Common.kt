@@ -1,5 +1,8 @@
 package com.example.cryptoapp.presentation.coin_detail.components
 
+import android.content.Intent
+import android.net.Uri
+import android.util.Log
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
@@ -27,6 +30,7 @@ import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -41,6 +45,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -55,6 +60,7 @@ import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
 import com.example.cryptoapp.presentation.ui.theme.Monorama
+import com.example.cryptoapp.presentation.ui.ultraSmall
 import com.example.cryptoapp.presentation.ui.verySmall
 
 @Composable
@@ -70,7 +76,7 @@ fun MarketsInfo(
         Text(
             text = "$$data/",
             style = TextStyle(
-                color = Color.Black,
+                color = MaterialTheme.colorScheme.onBackground,
                 fontSize = 36.sp,
                 fontFamily = Monorama,
             )
@@ -78,7 +84,7 @@ fun MarketsInfo(
         Text(
             text = label,
             style = TextStyle(
-                color = Color.Black,
+                color = MaterialTheme.colorScheme.onBackground,
                 fontSize = 16.sp,
                 fontFamily = Monorama
             ),
@@ -101,17 +107,17 @@ fun TeamListItem(
             text = teamMember.name,
             style = TextStyle(
                 fontSize = 28.sp,
-                color = Color.Black,
+                color = MaterialTheme.colorScheme.onBackground,
                 fontFamily = Monorama
             ),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
         Text(
-            text = "/"+teamMember.position,
+            text = "/" + teamMember.position,
             style = TextStyle(
                 fontWeight = FontWeight.Bold,
-                color = Color.Black.copy(.5f),
+                color = MaterialTheme.colorScheme.onBackground.copy(.5f),
                 fontFamily = Monorama
             ),
             modifier = Modifier.offset(y = (-2).dp)
@@ -125,7 +131,8 @@ fun CoinMarketsItem(
     market: CoinMarket
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val rotation by animateFloatAsState(targetValue = if (expanded) 180f else 0f, label = "")
+    val rotation by animateFloatAsState(targetValue = if (expanded) 180f else 0f)
+    val context = LocalContext.current
 
     Card(
         modifier = Modifier
@@ -139,23 +146,25 @@ fun CoinMarketsItem(
         onClick = { expanded = !expanded },
         shape = RectangleShape
     ) {
-        Column (
-            modifier = Modifier.background(Color.White)
-        ){
+        Column(
+            modifier = Modifier.background(MaterialTheme.colorScheme.background)
+        ) {
             Row {
                 Column {
                     Text(
                         text = market.exchangeName,
                         style = TextStyle(
                             fontSize = 36.sp,
-                            color = Color.Black
+                            fontFamily = Monorama,
+                            color = MaterialTheme.colorScheme.onBackground
                         )
                     )
                     Text(
                         text = market.pair,
                         style = TextStyle(
                             fontSize = 16.sp,
-                            color = Color.Black
+                            fontFamily = Monorama,
+                            color = MaterialTheme.colorScheme.onBackground
                         )
                     )
                 }
@@ -169,24 +178,34 @@ fun CoinMarketsItem(
                     Icon(imageVector = Icons.Default.KeyboardArrowDown, contentDescription = null)
                 }
             }
-            if (expanded){
-                Text(text = "Trust Score/"+ market.trustScore)
-                Text(text = "Adjusted Volume Share/"+market.adjustedVolume24hShare)
-                Text(text = "Price/"+market.quotes.uSD.price)
-                Text(text = "Volume last 24h/"+market.quotes.uSD.volume24h)
-                Text(text = "Last updated/"+market.lastUpdated)
+            if (expanded) {
+
+                val style = TextStyle(
+                    fontSize = 16.sp,
+                    fontFamily = Monorama,
+                    color = MaterialTheme.colorScheme.onBackground
+                )
+
+                Text(text = "Trust Score/" + market.trustScore, style = style)
+                Text(text = "Adjusted Volume Share/" + market.adjustedVolume24hShare, style = style)
+                Text(text = "Price/" + market.quotes.uSD.price, style = style)
+                Text(text = "Volume last 24h/" + market.quotes.uSD.volume24h, style = style)
+                Text(text = "Last updated/" + market.lastUpdated.substring(0, 10), style = style)
                 Spacer(modifier = Modifier.height(small))
                 TextButton(
-                    onClick = { /*TODO*/ },
+                    onClick = {
+                        val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse(market.marketUrl))
+                        context.startActivity(urlIntent)
+                    },
                     shape = RectangleShape,
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Black,
-                        contentColor = Color.White
+                        containerColor = MaterialTheme.colorScheme.onBackground,
+                        contentColor = MaterialTheme.colorScheme.background
                     )
                 ) {
                     Text(text = "visit website")
                 }
-                Divider(color = Color.Black, thickness = 1.dp)
+                Divider(color = MaterialTheme.colorScheme.onBackground, thickness = 1.dp)
             }
         }
     }
@@ -200,7 +219,7 @@ fun CoinTag(
         Text(
             text = "/$tag",
             style = TextStyle(
-                color = Color.Black,
+                color = MaterialTheme.colorScheme.onBackground,
                 fontFamily = Monorama,
                 fontSize = 16.sp
             )
@@ -230,7 +249,7 @@ fun CoinListItem(
                 Text(
                     text = "#" + coin.rank.toString(),
                     style = TextStyle(
-                        color = Color.White,
+                        color = MaterialTheme.colorScheme.background,
                         fontSize = 12.sp,
                         fontFamily = Chakrapetch,
                         textAlign = TextAlign.Center
@@ -238,7 +257,7 @@ fun CoinListItem(
                     modifier = Modifier
                         .clip(RectangleShape)
                         .fillMaxWidth()
-                        .background(Color.Black)
+                        .background(MaterialTheme.colorScheme.onBackground)
                         .padding(horizontal = verySmall),
                 )
                 Text(
@@ -247,7 +266,7 @@ fun CoinListItem(
                         fontSize = 12.sp,
                         textAlign = TextAlign.Center,
                         fontFamily = Chakrapetch,
-                        color = Color.Black,
+                        color = MaterialTheme.colorScheme.onBackground,
                     ),
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -255,7 +274,7 @@ fun CoinListItem(
             Text(
                 text = coin.name,
                 style = TextStyle(
-                    color = Color.Black,
+                    color = MaterialTheme.colorScheme.onBackground,
                     fontSize = 48.sp,
                     fontFamily = Monorama
                 ),
@@ -272,8 +291,51 @@ fun CoinListItem(
 fun CoinEventItem(
     event: CoinEvents
 ) {
+    val context = LocalContext.current
     Column {
-        Text(text = event.name)
-        Text(text = event.description)
+        Text(
+            text = event.name,
+            style = TextStyle(
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+                fontFamily = Chakrapetch,
+                color = MaterialTheme.colorScheme.onBackground
+            )
+        )
+        Text(
+            text = event.date.substring(0, 10),
+            style = TextStyle(
+                fontSize = 10.sp,
+                fontWeight = FontWeight.Bold,
+                fontFamily = Chakrapetch,
+                color = MaterialTheme.colorScheme.onBackground
+            )
+        )
+        if (event.description != ""){
+            Text(
+                text = event.description,
+                style = TextStyle(
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = Chakrapetch,
+                    color = MaterialTheme.colorScheme.onBackground
+                )
+            )
+        }
+        TextButton(
+            onClick = {
+                val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse(event.link))
+                context.startActivity(urlIntent)
+            },
+            shape = RectangleShape,
+            colors = ButtonDefaults.buttonColors(
+                containerColor = MaterialTheme.colorScheme.onBackground,
+                contentColor = MaterialTheme.colorScheme.background
+            ),
+            //modifier = Modifier.padding(ultraSmall)
+        ) {
+            Text(text = "Click for more")
+        }
+        Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
     }
 }

@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.remember
@@ -33,7 +34,7 @@ fun OnBoardingScreen(
     toMainScreen: () -> Unit
 ) {
     Column(
-        modifier = Modifier.fillMaxSize().background(Color.White)
+        modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)
     ) {
         val pagerState = rememberPagerState(
             initialPage = 0,
@@ -69,7 +70,6 @@ fun OnBoardingScreen(
                 pageSize = pages.size,
                 selectedPage = pagerState.currentPage
             )
-
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {

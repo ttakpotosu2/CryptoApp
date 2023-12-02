@@ -11,6 +11,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -34,7 +37,11 @@ fun OnBoardingPage(
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight(fraction = 0.5f),
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Crop,
+            colorFilter = ColorFilter.tint(
+                color = MaterialTheme.colorScheme.onBackground,
+                blendMode = BlendMode.Difference
+            )
         )
         Spacer(modifier = Modifier.height(verySmall))
         Text(
@@ -55,7 +62,6 @@ fun OnBoardingPage(
                 fontFamily = Chakrapetch,
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Normal
-
             )
         )
         Text(
