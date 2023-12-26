@@ -6,7 +6,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.cryptoapp.presentation.coin_detail.CoinDetailScreen
 import com.example.cryptoapp.presentation.coins_list.CoinsScreen
+import com.example.cryptoapp.presentation.home_screen.HomeScreen
 import com.example.cryptoapp.presentation.onboarding.OnBoardingScreen
+import com.example.cryptoapp.presentation.tools.ToolsScreen
 
 @Composable
 fun NavGraph(
@@ -14,7 +16,7 @@ fun NavGraph(
 ) {
     NavHost(
         navController = navHostController,
-        startDestination = Screens.OnBoardingScreen.route
+        startDestination = Screens.HomeScreen.route
     ) {
         composable(Screens.OnBoardingScreen.route) {
             OnBoardingScreen(toMainScreen = {
@@ -22,12 +24,21 @@ fun NavGraph(
             })
         }
         composable(Screens.CoinsScreen.route) {
-            CoinsScreen(toCoinDetailScreen = { id ->
+            CoinsScreen(
+                toCoinDetailScreen = { id ->
                 navHostController.navigate(Screens.CoinDetailScreen.route + "/${id}")
-            })
+            },
+                navController = navHostController
+            )
         }
         composable(Screens.CoinDetailScreen.route + "/{coinId}") {
-            CoinDetailScreen()
+            CoinDetailScreen(navController = navHostController)
+        }
+        composable(Screens.HomeScreen.route ) {
+            HomeScreen(navHostController)
+        }
+        composable(Screens.ToolsScreen.route ) {
+            ToolsScreen()
         }
     }
 }

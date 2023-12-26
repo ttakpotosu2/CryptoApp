@@ -1,5 +1,6 @@
 package com.example.cryptoapp.domain.repository
 
+import com.example.cryptoapp.data.remote.dto.CoinConverterDto
 import com.example.cryptoapp.data.remote.dto.CoinDetailDto
 import com.example.cryptoapp.data.remote.dto.CoinEventsDto
 import com.example.cryptoapp.data.remote.dto.CoinMarketDto
@@ -15,4 +16,9 @@ interface CoinRepository {
     suspend fun getCoinTickers(coinId: String): CoinTickerDto
     suspend fun getCoinMarkets(coinId: String): List<CoinMarketDto>
     suspend fun getCoinEvents(coinId: String): List<CoinEventsDto>
+    suspend fun getCoinConversion(
+        baseCoinId: String,
+        quoteCoinId: String,
+        amount: Int,
+    ): CoinConverterDto
 }

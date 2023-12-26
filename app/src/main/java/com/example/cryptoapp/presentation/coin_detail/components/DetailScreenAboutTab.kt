@@ -14,6 +14,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -36,7 +37,7 @@ fun DetailScreenAboutTab(
 ) {
     val coinTickerState = coinTickerViewModel.state.value
     val coinDetailState = coinDetailViewModel.state.value
-    val pointsData = DataUtils.getLineChartData(listSize = 13, maxRange = 30)
+    val pointsData = remember { DataUtils.getLineChartData(listSize = 13, maxRange = 30) }
 
     Column(
         modifier = Modifier
@@ -49,16 +50,16 @@ fun DetailScreenAboutTab(
         val coinDetail = coinDetailState.coin
         SingleLineChart(pointData = pointsData,)
 
-        MarketsInfo(label = "Markets", data = coinTicker?.quotes?.usd?.marketCap.toString())
+        MarketsInfo(label = "Markets", data = coinTicker?.quotes?.usd?.marketCap?.addCommas().toString())
         Spacer(modifier = Modifier.height(6.dp))
-        MarketsInfo(label = "Total Supply", data = coinTicker?.totalSupply.toString())
+        MarketsInfo(label = "Total Supply", data = coinTicker?.totalSupply?.addCommas().toString())
         Spacer(modifier = Modifier.height(6.dp))
         MarketsInfo(
             label = "In Circulation",
-            data = coinTicker?.circulatingSupply.toString()
+            data = coinTicker?.circulatingSupply?.addCommas().toString()
         )
         Spacer(modifier = Modifier.height(6.dp))
-        MarketsInfo(label = "Total volumes", data = coinTicker?.maxSupply.toString())
+        MarketsInfo(label = "Total volumes", data = coinTicker?.maxSupply?.addCommas().toString())
 
         if (coinDetail != null) {
             coinDetail.description?.let {

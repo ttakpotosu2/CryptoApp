@@ -4,14 +4,14 @@ import com.example.cryptoapp.data.remote.dto.TickersQuotes
 
 data class CoinTicker(
     val betaValue: Double,
-    val circulatingSupply: Int,
+    val circulatingSupply: Long,
     val firstDataAt: String,
     val id: String,
     val lastUpdated: String,
-    val maxSupply: Int,
+    val maxSupply: Long,
     val name: String,
     val quotes: TickersQuotes,
     val rank: Int,
     val symbol: String,
-    val totalSupply: Int
+    val totalSupply: Long
 )

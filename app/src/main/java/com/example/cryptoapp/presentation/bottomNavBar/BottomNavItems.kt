@@ -26,6 +26,9 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.cryptoapp.presentation.navigation.Screens
 
 data class BottomNavItems(
     val label: String,
@@ -36,21 +39,25 @@ data class BottomNavItems(
 val bottomNavItems = listOf(
     BottomNavItems(
         label = "Home",
-        icon = Icons.Default.Home
+        icon = Icons.Default.Home,
+        route = Screens.HomeScreen.route
     ),
     BottomNavItems(
         label = "Coins",
-        icon = Icons.Default.CurrencyBitcoin
+        icon = Icons.Default.CurrencyBitcoin,
+        route = Screens.CoinsScreen.route
     ),
     BottomNavItems(
         label = "Tools",
-        icon = Icons.Default.Settings
+        icon = Icons.Default.Settings,
+        route = Screens.ToolsScreen.route
     )
 )
 
 @Composable
 fun CryptoAppBottomNavBar(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    navController: NavController
 ) {
     val isSelected by remember { mutableStateOf(false) }
     NavigationBar(
@@ -61,7 +68,7 @@ fun CryptoAppBottomNavBar(
             NavigationBarItem(
                 alwaysShowLabel = true,
                 selected = isSelected,
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate(item.route) },
                 icon = {
                     Image(
                         imageVector = item.icon,

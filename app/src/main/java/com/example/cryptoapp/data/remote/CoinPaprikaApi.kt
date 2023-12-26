@@ -1,5 +1,6 @@
 package com.example.cryptoapp.data.remote
 
+import com.example.cryptoapp.data.remote.dto.CoinConverterDto
 import com.example.cryptoapp.data.remote.dto.CoinDetailDto
 import com.example.cryptoapp.data.remote.dto.CoinEventsDto
 import com.example.cryptoapp.data.remote.dto.CoinMarketDto
@@ -27,4 +28,11 @@ interface CoinPaprikaApi {
 
     @GET("/v1/coins/{coinId}/events")
     suspend fun getCoinEvents(@Path("coinId") coinId: String): List<CoinEventsDto>
+
+    @GET("/v1/price-converter?base_currency_id={baseCoinId}&quote_currency_id={quoteCoinId}&amount={amount}")
+    suspend fun getCoinConversion(
+        @Path("baseCoinId") baseCoinId: String,
+        @Path("quoteCoinId") quoteCoinId: String,
+        @Path("amount") amount: Int,
+    ): CoinConverterDto
 }

@@ -33,6 +33,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import co.yml.charts.common.extensions.isNotNull
 import coil.compose.SubcomposeAsyncImage
 import com.example.cryptoapp.presentation.bottomNavBar.CryptoAppBottomNavBar
@@ -48,7 +49,8 @@ import com.valentinilk.shimmer.shimmer
 @Composable
 fun CoinDetailScreen(
     coinTickerViewModel: CoinTickerViewModel = hiltViewModel(),
-    coinDetailViewModel: CoinDetailViewModel = hiltViewModel()
+    coinDetailViewModel: CoinDetailViewModel = hiltViewModel(),
+    navController: NavController
 ) {
     val coinTickerState = coinTickerViewModel.state.value
     val coinDetailState = coinDetailViewModel.state.value
@@ -61,7 +63,8 @@ fun CoinDetailScreen(
                 CryptoAppBottomNavBar(
                     modifier = Modifier
                         .height(80.dp)
-                        .padding(horizontal = big, vertical = small)
+                        .padding(horizontal = big, vertical = small),
+                    navController = navController
                 )
             }
         ) { paddingValues ->

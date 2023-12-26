@@ -42,6 +42,7 @@ import com.example.cryptoapp.presentation.coin_detail.components.CoinListItem
 import com.valentinilk.shimmer.shimmer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.navigation.NavController
 import coil.ImageLoader
 import com.example.cryptoapp.R
 import com.example.cryptoapp.presentation.bottomNavBar.CryptoAppBottomNavBar
@@ -59,7 +60,8 @@ import java.time.format.DateTimeFormatter
 @Composable
 fun CoinsScreen(
     viewModel: CoinsListViewModel = hiltViewModel(),
-    toCoinDetailScreen: (String) -> Unit
+    toCoinDetailScreen: (String) -> Unit,
+    navController: NavController
 ) {
     Scaffold(
         bottomBar = {
@@ -67,7 +69,8 @@ fun CoinsScreen(
             CryptoAppBottomNavBar(
                 modifier = Modifier
                     .height(80.dp)
-                    .padding(horizontal = big, vertical = small)
+                    .padding(horizontal = big, vertical = small),
+                navController = navController
             )
         }
     ) { paddingValue ->

@@ -333,3 +333,8 @@ fun CoinEventItem(
         Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
     }
 }
+
+// Extension function to add commas
+fun Long.addCommas(): String {
+    return String.format("%,d", this)
+}
