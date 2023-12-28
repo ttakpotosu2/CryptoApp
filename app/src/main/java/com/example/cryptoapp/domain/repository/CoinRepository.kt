@@ -16,9 +16,5 @@ interface CoinRepository {
     suspend fun getCoinTickers(coinId: String): CoinTickerDto
     suspend fun getCoinMarkets(coinId: String): List<CoinMarketDto>
     suspend fun getCoinEvents(coinId: String): List<CoinEventsDto>
-    suspend fun getCoinConversion(
-        baseCoinId: String,
-        quoteCoinId: String,
-        amount: Int,
-    ): CoinConverterDto
+    suspend fun getCoinConversion(baseCoinId: String, quoteCoinId: String, amount: Int): CoinConverterDto
 }

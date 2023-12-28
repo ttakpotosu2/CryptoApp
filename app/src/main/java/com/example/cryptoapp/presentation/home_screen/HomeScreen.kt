@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
@@ -34,6 +36,7 @@ import com.example.cryptoapp.presentation.ui.big
 import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
+import androidx.compose.ui.layout.Layout
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -90,6 +93,11 @@ fun HomeScreen(
             }
             Spacer(modifier = Modifier.height(12.dp))
             //Top four coins as trending
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2)
+            ){
+
+            }
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)

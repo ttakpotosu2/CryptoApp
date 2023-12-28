@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.cryptoapp.presentation.coin_detail.CoinDetailScreen
+import com.example.cryptoapp.presentation.coin_tools.CoinToolsScreen
 import com.example.cryptoapp.presentation.coins_list.CoinsScreen
 import com.example.cryptoapp.presentation.home_screen.HomeScreen
 import com.example.cryptoapp.presentation.onboarding.OnBoardingScreen
@@ -38,7 +39,7 @@ fun NavGraph(
             HomeScreen(navHostController)
         }
         composable(Screens.ToolsScreen.route ) {
-            ToolsScreen()
+            CoinToolsScreen()
         }
     }
 }

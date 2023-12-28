@@ -1,5 +1,6 @@
 package com.example.cryptoapp.presentation.coin_tools.viewmodels
 
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
@@ -24,22 +25,24 @@ class CoinToolsViewModel @Inject constructor(
     private val _state = mutableStateOf(CoinToolsState())
     val state: State<CoinToolsState> = _state
 
-    init {
-        val baseCoinId = savedStateHandle.get<String>(PARAM_BASE_COIN_ID)
-        val quoteCoinId = savedStateHandle.get<String>(PARAM_QUOTE_COIN_ID)
-        val amount = savedStateHandle.get<Int>(PARAM_AMOUNT)
+    // Do we need this init block if we are not navigating to a new page with the id?
+//    init {
+//        val baseCoinId = savedStateHandle.get<String>(PARAM_BASE_COIN_ID)
+//        val quoteCoinId = savedStateHandle.get<String>(PARAM_QUOTE_COIN_ID)
+//        val amount = savedStateHandle.get<Int>(PARAM_AMOUNT)
+//
+//        if (baseCoinId != null && quoteCoinId != null && amount != null) {
+//            getCoinConversion(baseCoinId, quoteCoinId, amount)
+//        }
+//    }
 
-        if (baseCoinId != null && quoteCoinId != null && amount != null) {
-            getCoinConversion(baseCoinId, quoteCoinId, amount)
-        }
-    }
-
-    private fun getCoinConversion(
+    fun getCoinConversion(
         baseCoinId: String,
         quoteCoinId: String,
         amount: Int
     ) {
-        useCase.getCoinConverter(amount, baseCoinId, quoteCoinId).onEach { result ->
+        val data = useCase.getCoinConverter(amount, baseCoinId, quoteCoinId)
+        data.onEach { result ->
             when (result) {
                 is Resource.Error -> {
                     _state.value = CoinToolsState(error = result.message ?: "An Error has occurred")
@@ -54,5 +57,6 @@ class CoinToolsViewModel @Inject constructor(
                 }
             }
         }.launchIn(viewModelScope)
+        Log.e("test", "$data")
     }
 }

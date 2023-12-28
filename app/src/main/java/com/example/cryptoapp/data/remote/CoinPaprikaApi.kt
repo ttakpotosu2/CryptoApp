@@ -9,6 +9,7 @@ import com.example.cryptoapp.data.remote.dto.CoinsDto
 import com.example.cryptoapp.data.remote.dto.TodayDto
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface CoinPaprikaApi {
     @GET("/v1/coins")
@@ -29,10 +30,10 @@ interface CoinPaprikaApi {
     @GET("/v1/coins/{coinId}/events")
     suspend fun getCoinEvents(@Path("coinId") coinId: String): List<CoinEventsDto>
 
-    @GET("/v1/price-converter?base_currency_id={baseCoinId}&quote_currency_id={quoteCoinId}&amount={amount}")
+    @GET("/v1/price-converter")
     suspend fun getCoinConversion(
-        @Path("baseCoinId") baseCoinId: String,
-        @Path("quoteCoinId") quoteCoinId: String,
-        @Path("amount") amount: Int,
+        @Query("base_currency_id") baseCoinId: String,
+        @Query("quote_currency_id") quoteCoinId: String,
+        @Query("amount") amount: Int,
     ): CoinConverterDto
 }
