@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
 import com.example.cryptoapp.presentation.coin_detail.CoinDetailScreen
+import com.example.cryptoapp.presentation.coin_tools.CoinToolsScreen
 import com.example.cryptoapp.presentation.coins_list.CoinsScreen
 import com.example.cryptoapp.presentation.navigation.NavGraph
 import com.example.cryptoapp.presentation.onboarding.OnBoardingScreen
@@ -29,7 +30,6 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 NavGraph(navHostController = navController)
             }
-//           OnBoardingScreen()
         }
     }
 }

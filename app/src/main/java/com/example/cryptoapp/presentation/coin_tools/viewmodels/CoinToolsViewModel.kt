@@ -25,17 +25,6 @@ class CoinToolsViewModel @Inject constructor(
     private val _state = mutableStateOf(CoinToolsState())
     val state: State<CoinToolsState> = _state
 
-    // Do we need this init block if we are not navigating to a new page with the id?
-//    init {
-//        val baseCoinId = savedStateHandle.get<String>(PARAM_BASE_COIN_ID)
-//        val quoteCoinId = savedStateHandle.get<String>(PARAM_QUOTE_COIN_ID)
-//        val amount = savedStateHandle.get<Int>(PARAM_AMOUNT)
-//
-//        if (baseCoinId != null && quoteCoinId != null && amount != null) {
-//            getCoinConversion(baseCoinId, quoteCoinId, amount)
-//        }
-//    }
-
     fun getCoinConversion(
         baseCoinId: String,
         quoteCoinId: String,
@@ -57,6 +46,5 @@ class CoinToolsViewModel @Inject constructor(
                 }
             }
         }.launchIn(viewModelScope)
-        Log.e("test", "$data")
     }
 }

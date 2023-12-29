@@ -39,7 +39,7 @@ fun NavGraph(
             HomeScreen(navHostController)
         }
         composable(Screens.ToolsScreen.route ) {
-            CoinToolsScreen()
+            CoinToolsScreen(navController = navHostController)
         }
     }
 }
