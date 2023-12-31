@@ -21,16 +21,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -39,6 +35,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.cryptoapp.R
+import com.example.cryptoapp.domain.model.Coins
 import com.example.cryptoapp.presentation.bottomNavBar.CryptoAppBottomNavBar
 import com.example.cryptoapp.presentation.coin_tools.components.CurrencyRow
 import com.example.cryptoapp.presentation.coin_tools.components.CustomKeyboard
@@ -48,27 +45,27 @@ import com.example.cryptoapp.presentation.ui.big
 import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.none
 import com.example.cryptoapp.presentation.ui.small
+import com.example.cryptoapp.presentation.ui.theme.Monorama
 import com.example.cryptoapp.presentation.ui.veryBig
 
 @Composable
 fun CoinToolsScreen(
     toolsViewModel: CoinToolsViewModel = hiltViewModel(),
     coinsListViewModel: CoinsListViewModel = hiltViewModel(),
-    navController: NavController
+    navController: NavController,
+    //state: ToolScreenState,
+    //onEvents: (ToolsScreenEvents) -> Unit
 ) {
     val coinToolsState = toolsViewModel.state.value
     val coinListState = coinsListViewModel.state.value
 
-    //get list of coins for drop down menus, base and quote
-    var isExpanded by remember { mutableStateOf(false) }
-    val codes = coinListState.coins.map { it.name }
-    var textFieldSize by remember { mutableStateOf(Size.Zero) }
+    val keys = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", "C")
 
-    var base by remember { mutableStateOf("usd-us-dollars") }
-    var quote by remember { mutableStateOf("btc-bitcoin") }
-    var amount by remember { mutableStateOf("100") }
+    var coinsList = emptyList<Coins>()
 
-    val keys = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", "C",)
+//    LaunchedEffect(Unit) {
+//        coinsList = coinListState.coins
+//    }
 
     Scaffold(
         bottomBar = {
@@ -80,22 +77,22 @@ fun CoinToolsScreen(
                 navController = navController
             )
         }
-    ) {
+    ) { paddingValues ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background)
-                .padding(it)
+                .padding(paddingValues)
                 .padding(medium),
             verticalArrangement = Arrangement.SpaceAround
         ) {
-            Box (
+            Box(
                 contentAlignment = Alignment.CenterStart
-            ){
+            ) {
                 Column {
-                    Card (
+                    Card(
                         shape = RectangleShape
-                    ){
+                    ) {
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -104,6 +101,7 @@ fun CoinToolsScreen(
                             horizontalAlignment = Alignment.End
                         ) {
                             CurrencyRow(
+                                //coins = ,
                                 code = "USD",
                                 name = "United States Dollars",
                                 modifier = Modifier.fillMaxWidth(),
@@ -119,9 +117,9 @@ fun CoinToolsScreen(
                         }
                     }
                     Spacer(modifier = Modifier.height(small))
-                    Card (
+                    Card(
                         shape = RectangleShape
-                    ){
+                    ) {
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -137,24 +135,23 @@ fun CoinToolsScreen(
                                 )
                             )
                             CurrencyRow(
-                                code = "USD",
-                                name = "United States Dollars",
+                                code = "BTC",
+                                name = "Bitcoin",
                                 modifier = Modifier.fillMaxWidth(),
                                 onDropDownIconClicked = {}
                             )
-
                         }
                     }
                 }
                 Box(
                     modifier = Modifier
                         .padding(start = veryBig)
-                        //.clip(RectangleShape)
                         .rotate(45f)
                         .clickable {}
                         .background(MaterialTheme.colorScheme.background)
                 ) {
-                    Icon(painter = painterResource(id = R.drawable.icon_sync),
+                    Icon(
+                        painter = painterResource(id = R.drawable.icon_sync),
                         contentDescription = null,
                         modifier = Modifier
                             .padding(small)
@@ -163,16 +160,43 @@ fun CoinToolsScreen(
                     )
                 }
             }
+            Spacer(modifier = Modifier.height(small))
+            TextButton(
+                onClick = {
+//                    toolsViewModel.getCoinConversion(
+//                        amount = amount.toInt(),
+//                        baseCoinId = base,
+//                        quoteCoinId = quote
+//                    )
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(MaterialTheme.colorScheme.tertiary)
+                    .padding(vertical = none)
+            ) {
+                Text(
+                    text = "Convert",
+                    style = TextStyle(
+                        fontFamily = Monorama,
+                        fontSize = 24.sp,
+                        color = MaterialTheme.colorScheme.onTertiary
+                    )
+                )
+            }
             LazyVerticalGrid(
                 columns = GridCells.Fixed(3),
                 verticalArrangement = Arrangement.spacedBy(none)
-            ){
-                items(keys){key ->
+            ) {
+                items(keys) { key ->
                     CustomKeyboard(
-                        modifier = Modifier.aspectRatio(1.1f, matchHeightConstraintsFirst = true),
+                        modifier = Modifier.aspectRatio(1.2f, matchHeightConstraintsFirst = true),
                         key = key,
                         onClick = {},
-                        backgroundColor = if (key == "C") Color.Red else MaterialTheme.colorScheme.background
+                        backgroundColor = if (key == "C") {
+                            MaterialTheme.colorScheme.secondary
+                        } else {
+                            MaterialTheme.colorScheme.background
+                        }
                     )
                 }
             }
@@ -181,7 +205,15 @@ fun CoinToolsScreen(
 }
 
 /*
-TextField(
+    var isExpanded by remember { mutableStateOf(false) }
+    val codes = coinListState.coins.map { it.name }
+    var textFieldSize by remember { mutableStateOf(Size.Zero) }
+
+    var base by remember { mutableStateOf("usd-us-dollars") }
+    var quote by remember { mutableStateOf("btc-bitcoin") }
+    var amount by remember { mutableStateOf("100") }
+
+    TextField(
             value = base,
             onValueChange = { base = it },
             placeholder = { Text(text = "Base") }

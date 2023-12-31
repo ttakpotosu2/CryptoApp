@@ -19,6 +19,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
+import com.example.cryptoapp.presentation.coin_tools.viewmodels.CoinToolsViewModel
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Monorama
 
@@ -53,6 +54,7 @@ fun CustomKeyboard(
     modifier: Modifier = Modifier,
     key: String,
     backgroundColor: Color,
+    //viewModel: CoinToolsViewModel,
     onClick: (String) -> Unit
 ) {
     Box(
@@ -71,4 +73,5 @@ fun CustomKeyboard(
             )
         )
     }
+    //TODO: Make call to api for amount after every key press
 }
