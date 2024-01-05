@@ -14,9 +14,9 @@ class GetCoinToolsUseCase @Inject constructor(
     private val repository: CoinRepository
 ) {
     fun getCoinConverter(
-        amount: Int,
-        baseCoinId: String,
-        quoteCoinId: String
+		amount: Double,
+		baseCoinId: String,
+		quoteCoinId: String
     ): Flow<Resource<CoinConverter>> = flow {
         try {
             emit(Resource.Loading())

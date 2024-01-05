@@ -39,9 +39,9 @@ class CoinRepositoryImpl @Inject constructor(
     }
 
     override suspend fun getCoinConversion(
-        baseCoinId: String,
-        quoteCoinId: String,
-        amount: Int
+		baseCoinId: String,
+		quoteCoinId: String,
+		amount: Double
     ): CoinConverterDto {
         return api.getCoinConversion(
             baseCoinId, quoteCoinId, amount

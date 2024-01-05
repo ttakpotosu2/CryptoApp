@@ -32,8 +32,8 @@ interface CoinPaprikaApi {
 
     @GET("/v1/price-converter")
     suspend fun getCoinConversion(
-        @Query("base_currency_id") baseCoinId: String,
-        @Query("quote_currency_id") quoteCoinId: String,
-        @Query("amount") amount: Int,
+		@Query("base_currency_id") baseCoinId: String,
+		@Query("quote_currency_id") quoteCoinId: String,
+		@Query("amount") amount: Double,
     ): CoinConverterDto
 }

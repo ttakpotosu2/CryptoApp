@@ -1,6 +1,8 @@
 package com.example.cryptoapp.presentation.coin_tools.components
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -20,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.sp
 import com.example.cryptoapp.domain.model.Coins
 import com.example.cryptoapp.presentation.ui.small
@@ -33,14 +36,17 @@ fun CurrencyRow(
 	onDropDownIconClicked: () -> Unit
 ) {
 	Row(
-		modifier = modifier,
+		modifier = modifier.clickable { onDropDownIconClicked() },
 		verticalAlignment = Alignment.CenterVertically
 	) {
 		Text(
 			text = code,
-			style = TextStyle(fontSize = 14.sp, color = MaterialTheme.colorScheme.background)
+			style = TextStyle(
+				fontSize = 14.sp,
+				color = MaterialTheme.colorScheme.background
+			)
 		)
-		IconButton(onClick = onDropDownIconClicked) {
+		IconButton(onClick = {}) {
 			Icon(imageVector = Icons.TwoTone.ArrowDropDown, contentDescription = null)
 		}
 		Spacer(modifier = Modifier.weight(1f))
@@ -86,8 +92,11 @@ fun BottomSheetContent(
 			Box(
 				modifier = modifier
 					.fillMaxWidth()
-					.clickable { onClick(coins.id
-					) }
+					.clickable {
+						onClick(
+							coins.id
+						)
+					}
 					.padding(small)
 			) {
 				Text(text = "${coins.symbol}: ${coins.name}")

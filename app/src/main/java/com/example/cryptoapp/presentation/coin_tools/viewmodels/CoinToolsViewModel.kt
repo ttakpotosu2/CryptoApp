@@ -14,7 +14,6 @@ import com.example.cryptoapp.presentation.coin_tools.components.ToolsScreenEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import java.text.DecimalFormat
 import javax.inject.Inject
 
 @HiltViewModel
@@ -26,6 +25,19 @@ class CoinToolsViewModel @Inject constructor(
     
     fun onEvent(events: ToolsScreenEvents) {
         when (events) {
+            is ToolsScreenEvents.NumberButtonItemClicked -> {
+                updateValues(value = events.value)
+            }
+            is ToolsScreenEvents.SwapIconClicked -> {
+                state = state.copy(
+                    fromCode = state.toCode,
+                    fromValue = "0",
+                    fromName = state.toName,
+                    toCode = state.fromCode,
+                    toValue = "0.0",
+                    toName = state.fromName
+                )
+            }
             is ToolsScreenEvents.BottomSheetItemClicked -> {
                 if (state.selection == SelectionState.FROM){
                     state = state.copy(
@@ -40,60 +52,47 @@ class CoinToolsViewModel @Inject constructor(
                     )
                 }
                 //updateValue("")
-                getCoinRates(baseCoinId = state.fromID, quoteCoinId = state.toId, amount = state.amount)
+                getCoinRates(baseCoinId = state.fromID, quoteCoinId = state.toId, amount = state.price)
             }
-            ToolsScreenEvents.FromCodeSelect -> {
+            is ToolsScreenEvents.FromCodeSelect -> {
                 state = state.copy(selection = SelectionState.FROM)
             }
-            ToolsScreenEvents.ToCodeSelect -> {
+            is ToolsScreenEvents.ToCodeSelect -> {
                 state = state.copy(selection = SelectionState.TO)
-            }
-            ToolsScreenEvents.SwapIconClicked -> {
-                state = state.copy(
-                    fromCode = state.toCode,
-                    fromValue = state.toValue,
-                    fromName = state.toName,
-                    toCode = state.fromCode,
-                    toValue = state.fromValue,
-                    toName = state.fromName
-                )
-            }
-            is ToolsScreenEvents.NumberButtonItemClicked -> {
-                updateValue(value = events.value)
             }
         }
     }
     
-    private fun updateValue(value: String){
+    private fun updateValues(value: String){
         val currentCurrencyValue = when(state.selection){
             SelectionState.FROM -> state.fromValue
             SelectionState.TO -> state.toValue
         }
-        val fromCurrencyRate = state.fromValue.toIntOrNull() ?: 0
-        val toCurrencyRate = state.toValue.toIntOrNull() ?: 0
+        //val fromCurrencyRate = state.fromValue.toIntOrNull() ?: 0
+        //val toCurrencyRate = state.toValue.toIntOrNull() ?: 0
         
         val updatedCurrencyValue = when(value){
-            "C" -> "1.00"
-            else -> if (currentCurrencyValue == "1.00") value else currentCurrencyValue + value
+            "C" -> "0"
+            else -> if (currentCurrencyValue == "0") value else currentCurrencyValue + value
         }
         
-        val numberFormat = DecimalFormat("#.00")
+      //  val numberFormat = DecimalFormat("#.000000000")
         
         when(state.selection){
             SelectionState.FROM -> {
                 val fromValue = updatedCurrencyValue.toInt()
-                val toValue = fromValue / fromCurrencyRate * toCurrencyRate// TODO: Check if math is correct
+                val toValue = fromValue * state.price// TODO: Check if math is correct
                 state = state.copy(
                     fromValue = updatedCurrencyValue,
-                    toValue = numberFormat.format(toValue)
+                    toValue = toValue.toString()
                 )
             }
             SelectionState.TO -> {
                 val toValue = updatedCurrencyValue.toInt()
-                val fromValue = toValue / toCurrencyRate * fromCurrencyRate
+                val fromValue = toValue / state.price
                 state = state.copy(
                     toValue = updatedCurrencyValue,
-                    fromValue = numberFormat.format(fromValue)
+                    fromValue = fromValue.toString()
                 )
             }
         }
@@ -102,7 +101,7 @@ class CoinToolsViewModel @Inject constructor(
     private fun getCoinRates(
         baseCoinId: String,
         quoteCoinId: String,
-        amount: Int
+        amount: Double
     ) {
         val data = useCase.getCoinConverter(amount, baseCoinId, quoteCoinId)
         viewModelScope.launch {
@@ -121,28 +120,3 @@ class CoinToolsViewModel @Inject constructor(
         Log.e("test", "$data")
     }
 }
-
-    /*
-    fun getCoinConversion(
-        baseCoinId: String,
-        quoteCoinId: String,
-        amount: Int
-    ) {
-        val data = useCase.getCoinConverter(amount, baseCoinId, quoteCoinId)
-        data.onEach { result ->
-            when (result) {
-                is Resource.Error -> {
-                    _state.value = CoinToolsState(error = result.message ?: "An Error has occurred")
-                }
-
-                is Resource.Loading -> {
-                    _state.value = CoinToolsState(isLoading = true)
-                }
-
-                is Resource.Success -> {
-                    _state.value = CoinToolsState(coinTools = result.data)
-                }
-            }
-        }.launchIn(viewModelScope)
-    }
-*/

@@ -1,6 +1,8 @@
 package com.example.cryptoapp.presentation.coin_tools
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -58,7 +60,7 @@ import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.veryBig
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun CoinToolsScreen(
 	coinsListViewModel: CoinsListViewModel = hiltViewModel(),
@@ -153,7 +155,7 @@ fun CoinToolsScreen(
 								}
 							)
 							Text(
-								text = state.fromValue,
+								text = state.fromValue.toString(),
 								style = TextStyle(
 									fontSize = 40.sp,
 									color = if (state.selection == SelectionState.FROM) {
@@ -162,7 +164,9 @@ fun CoinToolsScreen(
 										MaterialTheme.colorScheme.background
 									}
 								),
-								modifier = Modifier.clickable { onEvents(ToolsScreenEvents.FromCodeSelect) }
+								modifier = Modifier
+									.clickable { onEvents(ToolsScreenEvents.FromCodeSelect) }
+									.basicMarquee()
 							)
 						}
 					}
@@ -180,7 +184,7 @@ fun CoinToolsScreen(
 							horizontalAlignment = Alignment.End
 						) {
 							Text(
-								text = state.toValue,
+								text = state.toValue.toString(),
 								style = TextStyle(
 									fontSize = 40.sp,
 									color = if (state.selection == SelectionState.TO) {
@@ -189,7 +193,9 @@ fun CoinToolsScreen(
 										MaterialTheme.colorScheme.background
 									}
 								),
-								modifier = Modifier.clickable { onEvents(ToolsScreenEvents.ToCodeSelect) }
+								modifier = Modifier
+									.clickable { onEvents(ToolsScreenEvents.ToCodeSelect) }
+									.basicMarquee()
 							)
 							CurrencyRow(
 								code = state.toCode,
@@ -222,28 +228,7 @@ fun CoinToolsScreen(
 				}
 			}
 			Spacer(modifier = Modifier.height(small))
-//            TextButton(
-//                onClick = {
-//                    toolsViewModel.getCoinConversion(
-//                        amount = amount.toInt(),
-//                        baseCoinId = base,
-//                        quoteCoinId = quote
-//                    )
-//                },
-//                modifier = Modifier
-//                    .fillMaxWidth()
-//                    .background(MaterialTheme.colorScheme.tertiary)
-//                    .padding(vertical = none)
-//            ) {
-//                Text(
-//                    text = "Convert",
-//                    style = TextStyle(
-//                        fontFamily = Monorama,
-//                        fontSize = 24.sp,
-//                        color = MaterialTheme.colorScheme.onTertiary
-//                    )
-//                )
-//            }
+
 			LazyVerticalGrid(
 				columns = GridCells.Fixed(3),
 				verticalArrangement = Arrangement.spacedBy(none)
