@@ -1,6 +1,5 @@
 package com.example.cryptoapp.presentation.coin_tools.viewmodels
 
-import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -12,17 +11,18 @@ import com.example.cryptoapp.presentation.coin_tools.components.SelectionState
 import com.example.cryptoapp.presentation.coin_tools.components.ToolScreenState
 import com.example.cryptoapp.presentation.coin_tools.components.ToolsScreenEvents
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import java.text.DecimalFormat
 import javax.inject.Inject
 
 @HiltViewModel
 class CoinToolsViewModel @Inject constructor(
-    private val useCase: GetCoinToolsUseCase,
+    private val useCase: GetCoinToolsUseCase
 ) : ViewModel() {
     
     var state by mutableStateOf(ToolScreenState())
+    private val numberFormat = DecimalFormat("#0.0000000000")
     
     fun onEvent(events: ToolsScreenEvents) {
         when (events) {
@@ -54,7 +54,11 @@ class CoinToolsViewModel @Inject constructor(
                     )
                 }
                 //updateValue("")
-                getCoinRates(baseCoinId = state.fromID, quoteCoinId = state.toId, amount = state.fromValue.toDouble())
+                getCoinRates(
+                    baseCoinId = state.fromID,
+                    quoteCoinId = state.toId,
+                    amount = state.fromValue.toDouble()
+                )
             }
             is ToolsScreenEvents.FromCodeSelect -> {
                 state = state.copy(selection = SelectionState.FROM)
@@ -73,15 +77,17 @@ class CoinToolsViewModel @Inject constructor(
         
         val updatedCurrencyValue = when(keyPressed){
             "C" -> "0"
-            else -> if (currentValue == "0") keyPressed else currentValue + keyPressed
+            else -> if (currentValue == "0" || currentValue == "1.0") {
+                keyPressed
+            } else {
+                currentValue + keyPressed
+            }
         }
-        
-        val numberFormat = DecimalFormat("#0.000000000")
         
         when(state.selection){
             SelectionState.FROM -> {
                 val fromValue = updatedCurrencyValue.toDouble()
-                val toValue = fromValue * state.price// TODO: Check if math is correct
+                val toValue = fromValue * state.price
                 state = state.copy(
                     fromValue = updatedCurrencyValue,
                     toValue = numberFormat.format(toValue)
@@ -101,22 +107,31 @@ class CoinToolsViewModel @Inject constructor(
     private fun getCoinRates(
         baseCoinId: String,
         quoteCoinId: String,
-        amount: Double
+        amount: Double,
     ) {
-        val data = useCase.getCoinConverter(amount, baseCoinId, quoteCoinId)
-        viewModelScope.launch {
-            data.onEach { result ->
-                when(result){
-                    is Resource.Success -> {
-                        state = ToolScreenState() //TODO: Lets keep an eye on this map thing
-                    }
-                    is Resource.Error -> {
-                        state = ToolScreenState(error = result.message)
-                    }
-                    is Resource.Loading -> {}
+        useCase.getCoinConverter(amount, baseCoinId, quoteCoinId).onEach { result ->
+            when(result){
+                is Resource.Success -> {
+                    val price = result.data?.price ?: 1.0
+                    val resultAmount = result.data?.amount ?: 1.0
+                    state = ToolScreenState(
+                        toId = quoteCoinId,
+                        toCode = state.toCode,
+                        toName = state.toName,
+                        toValue = numberFormat.format(price),
+                        price = price / resultAmount,
+                        fromID = baseCoinId,
+                        fromCode = state.fromCode,
+                        fromName = state.fromName,
+                    )
                 }
+                is Resource.Error -> {
+                    state = ToolScreenState(
+                        error = result.message ?: "Please Try Again"
+                    )
+                }
+                is Resource.Loading -> {}
             }
-        }
-        Log.e("test", "$data")
+        }.launchIn(viewModelScope)
     }
 }

@@ -4,7 +4,7 @@ import com.example.cryptoapp.domain.model.CoinConverter
 import com.google.gson.annotations.SerializedName
 
 data class CoinConverterDto(
-    val amount: Int,
+    val amount: Double,
     @SerializedName("base_currency_id")
     val baseCurrencyId: String,
     @SerializedName("base_currency_name")

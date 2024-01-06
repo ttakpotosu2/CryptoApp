@@ -43,7 +43,7 @@ fun CurrencyRow(
 				color = MaterialTheme.colorScheme.background
 			)
 		)
-		IconButton(onClick = {}) {
+		IconButton(onClick = {onDropDownIconClicked()}) {
 			Icon(imageVector = Icons.TwoTone.ArrowDropDown, contentDescription = null)
 		}
 		Spacer(modifier = Modifier.weight(1f))

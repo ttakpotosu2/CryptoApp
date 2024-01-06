@@ -44,7 +44,6 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.cryptoapp.R
-import com.example.cryptoapp.domain.model.Coins
 import com.example.cryptoapp.presentation.bottomNavBar.CryptoAppBottomNavBar
 import com.example.cryptoapp.presentation.coin_tools.components.BottomSheetContent
 import com.example.cryptoapp.presentation.coin_tools.components.CurrencyRow
@@ -71,12 +70,6 @@ fun CoinToolsScreen(
 	val coinListState = coinsListViewModel.state.value
 	
 	val keys = listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", "C")
-	
-	var coinsList = emptyList<Coins>()
-	
-//	LaunchedEffect(Unit) {
-//		coinsList = coinListState.coins
-//	}
 	
 	val scope = rememberCoroutineScope()
 	val sheetState = rememberModalBottomSheetState()
@@ -145,7 +138,6 @@ fun CoinToolsScreen(
 							horizontalAlignment = Alignment.End
 						) {
 							CurrencyRow(
-								//coins = ,
 								code = state.fromCode,
 								name = state.fromName,
 								modifier = Modifier.fillMaxWidth(),
@@ -164,9 +156,7 @@ fun CoinToolsScreen(
 										MaterialTheme.colorScheme.background
 									}
 								),
-								modifier = Modifier
-									.clickable { onEvents(ToolsScreenEvents.FromCodeSelect) }
-									.basicMarquee()
+								modifier = Modifier.basicMarquee()
 							)
 						}
 					}
@@ -193,9 +183,7 @@ fun CoinToolsScreen(
 										MaterialTheme.colorScheme.background
 									}
 								),
-								modifier = Modifier
-									.clickable { onEvents(ToolsScreenEvents.ToCodeSelect) }
-									.basicMarquee()
+								modifier = Modifier.basicMarquee()
 							)
 							CurrencyRow(
 								code = state.toCode,
@@ -205,6 +193,7 @@ fun CoinToolsScreen(
 									showBottomSheet = true
 									onEvents(ToolsScreenEvents.ToCodeSelect)
 								}
+								
 							)
 						}
 					}

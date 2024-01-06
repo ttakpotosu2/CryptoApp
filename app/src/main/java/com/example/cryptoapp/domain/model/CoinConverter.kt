@@ -1,7 +1,7 @@
 package com.example.cryptoapp.domain.model
 
 data class CoinConverter(
-    val amount: Int,
+    val amount: Double,
     val baseCurrencyId: String,
     val baseCurrencyName: String,
     val basePriceLastUpdated: String,

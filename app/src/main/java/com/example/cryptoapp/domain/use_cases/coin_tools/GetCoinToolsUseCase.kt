@@ -4,8 +4,10 @@ import com.example.cryptoapp.common.Resource
 import com.example.cryptoapp.data.remote.dto.toCoinConverter
 import com.example.cryptoapp.domain.model.CoinConverter
 import com.example.cryptoapp.domain.repository.CoinRepository
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
@@ -31,5 +33,5 @@ class GetCoinToolsUseCase @Inject constructor(
         } catch (e: IOException){
             emit(Resource.Error("Check Internet Connection!"))
         }
-    }
+    }.flowOn(Dispatchers.IO)
 }
