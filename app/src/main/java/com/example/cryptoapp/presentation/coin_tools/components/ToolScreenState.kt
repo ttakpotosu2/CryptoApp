@@ -1,5 +1,7 @@
 package com.example.cryptoapp.presentation.coin_tools.components
 
+import java.text.DecimalFormat
+
 data class ToolScreenState(
     val fromCode: String = "USD",
     val fromName: String = "United States Dollars",
@@ -12,7 +14,8 @@ data class ToolScreenState(
     val price: Double = 0.0000227352,
     val error: String? = null,
     val selection: SelectionState = SelectionState.FROM,
-    val toValue: String = (amount * price).toString()
+    val numberFormat: DecimalFormat = DecimalFormat("#0.000000000"),
+    val toValue: String = numberFormat.format((amount * price))
 )
 
 enum class SelectionState {

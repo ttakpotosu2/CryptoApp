@@ -99,8 +99,8 @@ fun CoinToolsScreen(
 			}
 		) {
 			BottomSheetContent(
-				onClick = { id ->
-					onEvents(ToolsScreenEvents.BottomSheetItemClicked(value = id))
+				onClick = { coins ->
+					onEvents(ToolsScreenEvents.BottomSheetItemClicked(value = coins))
 					scope.launch { sheetState.hide() }.invokeOnCompletion {
 						if (!sheetState.isVisible) showBottomSheet = false
 					}
@@ -155,7 +155,7 @@ fun CoinToolsScreen(
 								}
 							)
 							Text(
-								text = state.fromValue.toString(),
+								text = state.fromValue,
 								style = TextStyle(
 									fontSize = 40.sp,
 									color = if (state.selection == SelectionState.FROM) {
@@ -184,7 +184,7 @@ fun CoinToolsScreen(
 							horizontalAlignment = Alignment.End
 						) {
 							Text(
-								text = state.toValue.toString(),
+								text = state.toValue,
 								style = TextStyle(
 									fontSize = 40.sp,
 									color = if (state.selection == SelectionState.TO) {

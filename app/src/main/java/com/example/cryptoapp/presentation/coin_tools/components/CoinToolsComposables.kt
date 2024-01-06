@@ -1,8 +1,6 @@
 package com.example.cryptoapp.presentation.coin_tools.components
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -22,7 +20,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.sp
 import com.example.cryptoapp.domain.model.Coins
 import com.example.cryptoapp.presentation.ui.small
@@ -83,23 +80,19 @@ fun CustomKeyboard(
 
 @Composable
 fun BottomSheetContent(
-	onClick: (String) -> Unit,
+	onClick: (Coins) -> Unit,
 	currencies: List<Coins>,
 	modifier: Modifier = Modifier
 ) {
 	LazyColumn {
-		items(currencies) { coins ->
+		items(currencies) { coin ->
 			Box(
 				modifier = modifier
 					.fillMaxWidth()
-					.clickable {
-						onClick(
-							coins.id
-						)
-					}
+					.clickable { onClick(coin) }
 					.padding(small)
 			) {
-				Text(text = "${coins.symbol}: ${coins.name}")
+				Text(text = "${coin.symbol}: ${coin.name}")
 			}
 		}
 	}
