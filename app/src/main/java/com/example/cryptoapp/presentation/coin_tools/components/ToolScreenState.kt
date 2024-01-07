@@ -11,7 +11,7 @@ data class ToolScreenState(
     val toName: String = "Bitcoin",
     val toId: String = "btc-bitcoin",
     val amount: Double = 1.0,
-    val price: Double = 0.0000227352,
+    val price: Double = 1.0,
     val error: String? = null,
     val selection: SelectionState = SelectionState.FROM,
     val numberFormat: DecimalFormat = DecimalFormat("#0.000000000"),
