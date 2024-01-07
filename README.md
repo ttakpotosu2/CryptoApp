@@ -21,4 +21,5 @@ For Dark Theme
 ![Screenshot_20240107_151433](https://github.com/ttakpotosu2/CryptoApp/assets/105734117/4463cca8-1781-4e87-a07b-361f14b71d65)
 
 Screen Recording
-https://github.com/ttakpotosu2/CryptoApp/assets/105734117/8a9476a6-528c-486b-bbba-3d64bafd79ea
+![Screen_recording_20240107_151703](https://github.com/ttakpotosu2/CryptoApp/assets/105734117/0791ceab-ca5b-491c-a92c-3f6f72b1b783)
+![Screen_recording_20240107_151704](https://github.com/ttakpotosu2/CryptoApp/assets/105734117/04ad5c6c-e727-4353-bf8f-9534acbaa6ab)
