@@ -22,7 +22,7 @@ class CoinToolsViewModel @Inject constructor(
 ) : ViewModel() {
     
     var state by mutableStateOf(ToolScreenState())
-    private val numberFormat = DecimalFormat("#0.0000000000")
+    private val numberFormat = DecimalFormat("#0.00000")
     
     fun onEvent(events: ToolsScreenEvents) {
         when (events) {
@@ -32,11 +32,18 @@ class CoinToolsViewModel @Inject constructor(
             is ToolsScreenEvents.SwapIconClicked -> {
                 state = state.copy(
                     fromCode = state.toCode,
+                    fromID = state.toId,
                     fromValue = state.toValue,
                     fromName = state.toName,
                     toCode = state.fromCode,
+                    toId = state.fromID,
                     toValue = state.fromValue,
                     toName = state.fromName
+                )
+                getCoinRates(
+                    baseCoinId = state.fromID,
+                    quoteCoinId = state.toId,
+                    amount = 1.0
                 )
             }
             is ToolsScreenEvents.BottomSheetItemClicked -> {
@@ -57,7 +64,7 @@ class CoinToolsViewModel @Inject constructor(
                 getCoinRates(
                     baseCoinId = state.fromID,
                     quoteCoinId = state.toId,
-                    amount = state.fromValue.toDouble()
+                    amount = if (state.fromValue == "0") 1.0 else state.fromValue.toDouble()
                 )
             }
             is ToolsScreenEvents.FromCodeSelect -> {

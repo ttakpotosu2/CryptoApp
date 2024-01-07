@@ -197,7 +197,7 @@ fun CoinToolsScreen(
 							)
 						}
 					}
-					// TO Coin End
+					// T Coin End
 				}
 				Box(
 					modifier = Modifier
