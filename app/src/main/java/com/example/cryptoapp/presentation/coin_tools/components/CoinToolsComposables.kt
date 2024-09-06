@@ -81,9 +81,9 @@ fun CustomKeyboard(
 
 @Composable
 fun BottomSheetContent(
-	onClick: (Coins) -> Unit,
+	modifier: Modifier = Modifier,
 	currencies: List<Coins>,
-	modifier: Modifier = Modifier
+	onClick: (Coins) -> Unit
 ) {
 	LazyColumn {
 		items(currencies) { coin ->

@@ -34,7 +34,7 @@ fun NavGraph(
             CoinsScreen(
                 toCoinDetailScreen = { id ->
                 navHostController.navigate(Screens.CoinDetailScreen.route + "/${id}")
-            },
+                },
                 navController = navHostController
             )
         }

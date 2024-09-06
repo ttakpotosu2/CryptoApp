@@ -54,7 +54,9 @@ fun CoinDetailTabs() {
                                 fontSize = 28.sp,
                                 color = if (tabIndex == index) {
                                     MaterialTheme.colorScheme.onBackground
-                                } else MaterialTheme.colorScheme.onBackground.copy(0.3f),
+                                } else {
+                                    MaterialTheme.colorScheme.onBackground.copy(0.3f)
+                                },
                                 fontFamily = Monorama
                             )
                         )
