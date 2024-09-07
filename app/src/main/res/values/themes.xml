@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style
+        name="Theme.CryptoApp"
+        parent="Theme.MaterialComponents.Light.DarkActionBar">
+            <item name="colorPrimary">@color/black</item>
 
-    <style name="Theme.CryptoApp" parent="android:Theme.Material.Light.NoActionBar" />
+    </style>
+        />
 </resources>

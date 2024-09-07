@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/coins_list"
+        android:icon="@drawable/baseline_currency_bitcoin_24"
+        android:title="Coins"
+        />
+
+    <item
+        android:id="@+id/tools"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Tools" />
+
+</menu>
