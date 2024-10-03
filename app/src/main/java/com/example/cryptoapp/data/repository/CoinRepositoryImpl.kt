@@ -8,7 +8,7 @@ import com.example.cryptoapp.data.remote.dto.CoinMarketDto
 import com.example.cryptoapp.data.remote.dto.CoinTickerDto
 import com.example.cryptoapp.data.remote.dto.CoinsDto
 import com.example.cryptoapp.data.remote.dto.TodayDto
-import com.example.cryptoapp.domain.repository.CoinRepository
+import com.example.shared.domain.repository.CoinRepository
 import javax.inject.Inject
 
 class CoinRepositoryImpl @Inject constructor(

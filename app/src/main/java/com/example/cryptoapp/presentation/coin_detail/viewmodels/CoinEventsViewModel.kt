@@ -5,9 +5,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cryptoapp.common.Constants
-import com.example.cryptoapp.common.Resource
-import com.example.cryptoapp.domain.use_cases.get_coin.GetCoinEventsUseCase
+import com.example.shared.common.Constants
+import com.example.shared.common.Resource
+import com.example.shared.domain.use_cases.get_coin.GetCoinEventsUseCase
 import com.example.cryptoapp.presentation.coin_detail.components.states.CoinEventsState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
@@ -16,8 +16,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CoinEventsViewModel @Inject constructor(
-    private val getCoinEventsUseCase: GetCoinEventsUseCase,
-    savedStateHandle: SavedStateHandle
+	private val getCoinEventsUseCase: GetCoinEventsUseCase,
+	savedStateHandle: SavedStateHandle
 ): ViewModel(){
 
     private val _state = mutableStateOf(CoinEventsState())

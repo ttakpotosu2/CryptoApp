@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -38,6 +39,7 @@ import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
 import androidx.compose.ui.layout.Layout
+import com.example.shared.Greeting
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -46,7 +48,7 @@ fun HomeScreen(
 ) {
     Scaffold(
         bottomBar = {
-            Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
+            HorizontalDivider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
             CryptoAppBottomNavBar(
                 modifier = Modifier
                     .height(80.dp)
@@ -62,6 +64,7 @@ fun HomeScreen(
                 .padding(it)
                 .padding(all = medium)
         ) {
+            Text(text = "Shared: ${Greeting().greet()}")
             Text(
                 text = "Your Account",
                 style = TextStyle(

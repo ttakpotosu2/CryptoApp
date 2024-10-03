@@ -7,6 +7,7 @@ buildscript {
     dependencies {
         classpath (libs.gradle)
         classpath (libs.hilt.android.gradle.plugin)
+        classpath (libs.kotlinx.serialization.json)
     }
 }
 
@@ -21,4 +22,5 @@ plugins {
     alias(libs.plugins.kotlinAndroid).apply(false)
     alias(libs.plugins.kotlinMultiplatform).apply(false)
     alias(libs.plugins.compose.compiler).apply(false)
+    alias(libs.plugins.kotlinx.serialization).apply(false)
 }

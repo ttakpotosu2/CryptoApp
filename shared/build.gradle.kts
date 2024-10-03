@@ -26,10 +26,17 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.core)
+            implementation(libs.kotlinx.coroutines.core)
         }
+        
         iosMain.dependencies {
         
+        }
+        
+        androidMain.dependencies {
+            
         }
         
         commonTest.dependencies {

@@ -2,39 +2,42 @@ package com.example.cryptoapp.data.remote.dto
 
 
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class TickersUSD(
-    @SerializedName("ath_date")
+    @SerialName("ath_date")
     val athDate: String,
-    @SerializedName("ath_price")
+    @SerialName("ath_price")
     val athPrice: Double,
-    @SerializedName("market_cap")
+    @SerialName("market_cap")
     val marketCap: Long,
-    @SerializedName("market_cap_change_24h")
+    @SerialName("market_cap_change_24h")
     val marketCapChange24h: Double,
-    @SerializedName("percent_change_12h")
+    @SerialName("percent_change_12h")
     val percentChange12h: Double,
-    @SerializedName("percent_change_15m")
+    @SerialName("percent_change_15m")
     val percentChange15m: Double,
-    @SerializedName("percent_change_1h")
+    @SerialName("percent_change_1h")
     val percentChange1h: Double,
-    @SerializedName("percent_change_1y")
+    @SerialName("percent_change_1y")
     val percentChange1y: Double,
-    @SerializedName("percent_change_24h")
+    @SerialName("percent_change_24h")
     val percentChange24h: Double,
-    @SerializedName("percent_change_30d")
+    @SerialName("percent_change_30d")
     val percentChange30d: Double,
-    @SerializedName("percent_change_30m")
+    @SerialName("percent_change_30m")
     val percentChange30m: Double,
-    @SerializedName("percent_change_6h")
+    @SerialName("percent_change_6h")
     val percentChange6h: Double,
-    @SerializedName("percent_change_7d")
+    @SerialName("percent_change_7d")
     val percentChange7d: Double,
-    @SerializedName("percent_from_price_ath")
+    @SerialName("percent_from_price_ath")
     val percentFromPriceAth: Double,
     val price: Double,
-    @SerializedName("volume_24h")
+    @SerialName("volume_24h")
     val volume24h: Double,
-    @SerializedName("volume_24h_change_24h")
+    @SerialName("volume_24h_change_24h")
     val volume24hChange24h: Double
 )

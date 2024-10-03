@@ -1,35 +1,38 @@
 package com.example.cryptoapp.data.remote.dto
 
 
-import com.example.cryptoapp.domain.model.CoinMarket
+import com.example.shared.domain.model.CoinMarket
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class CoinMarketDto(
-    @SerializedName("adjusted_volume_24h_share")
+    @SerialName("adjusted_volume_24h_share")
     val adjustedVolume24hShare: Double,
-    @SerializedName("base_currency_id")
+    @SerialName("base_currency_id")
     val baseCurrencyId: String,
-    @SerializedName("base_currency_name")
+    @SerialName("base_currency_name")
     val baseCurrencyName: String,
     val category: String,
-    @SerializedName("exchange_id")
+    @SerialName("exchange_id")
     val exchangeId: String,
-    @SerializedName("exchange_name")
+    @SerialName("exchange_name")
     val exchangeName: String,
-    @SerializedName("fee_type")
+    @SerialName("fee_type")
     val feeType: String,
-    @SerializedName("last_updated")
+    @SerialName("last_updated")
     val lastUpdated: String,
-    @SerializedName("market_url")
+    @SerialName("market_url")
     val marketUrl: String,
     val outlier: Boolean,
     val pair: String,
-    @SerializedName("quote_currency_id")
+    @SerialName("quote_currency_id")
     val quoteCurrencyId: String,
-    @SerializedName("quote_currency_name")
+    @SerialName("quote_currency_name")
     val quoteCurrencyName: String,
     val quotes: MarketsQuotes,
-    @SerializedName("trust_score")
+    @SerialName("trust_score")
     val trustScore: String
 )
 

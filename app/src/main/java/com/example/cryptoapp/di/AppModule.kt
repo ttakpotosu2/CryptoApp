@@ -1,13 +1,14 @@
 package com.example.cryptoapp.di
 
-import com.example.cryptoapp.common.Constants
+import com.example.shared.common.Constants
 import com.example.cryptoapp.data.remote.CoinPaprikaApi
 import com.example.cryptoapp.data.repository.CoinRepositoryImpl
-import com.example.cryptoapp.domain.repository.CoinRepository
+import com.example.shared.domain.repository.CoinRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import io.ktor.client.HttpClient
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -31,13 +32,16 @@ object AppModule {
     @Singleton
     fun getClient(
         loggingInterceptor: HttpLoggingInterceptor
-    ): OkHttpClient {
-        return OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
-            .readTimeout(15, TimeUnit.SECONDS)
-            .connectTimeout(15, TimeUnit.SECONDS)
-            .writeTimeout(15, TimeUnit.SECONDS)
-            .build()
+    ): HttpClient {
+        
+        return HttpClient().
+        
+//        return OkHttpClient.Builder()
+//            .addInterceptor(loggingInterceptor)
+//            .readTimeout(15, TimeUnit.SECONDS)
+//            .connectTimeout(15, TimeUnit.SECONDS)
+//            .writeTimeout(15, TimeUnit.SECONDS)
+//            .build()
     }
     @Provides
     @Singleton

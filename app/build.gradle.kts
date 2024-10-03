@@ -2,8 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.compose.compiler)
-//    id("com.android.application")
-//    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.kotlinx.serialization)
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
 }
@@ -74,7 +73,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation (libs.androidx.material.icons.extended)
     
-    implementation(project(":shared"))
+    implementation(projects.shared)
 
     // Compose dependencies
     implementation (libs.androidx.lifecycle.viewmodel.compose)
@@ -86,8 +85,8 @@ dependencies {
     implementation (libs.kotlinx.coroutines.android)
 
     // Coroutine Lifecycle Scopes
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
-    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.runtime.ktx)
 
     //Dagger - Hilt
     implementation ("com.google.dagger:hilt-android:2.50")
@@ -100,7 +99,17 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:okhttp:5.0.0-alpha.12")
     implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.12")
-
+    
+    // Ktor Client
+    implementation (libs.ktor.client.core)
+    implementation (libs.ktor.client.json)
+    implementation (libs.ktor.client.android)
+    implementation (libs.ktor.client.content.negotiation)
+    implementation (libs.ktor.client.serialization)
+    implementation (libs.ktor.client.logging)
+    implementation (libs.logback.classic)
+    implementation (libs.kotlinx.serialization.json)
+    
     //Coil
     implementation(libs.coil.compose)
 

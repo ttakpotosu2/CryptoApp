@@ -1,18 +1,21 @@
 package com.example.cryptoapp.data.remote.dto
 
-import com.example.cryptoapp.domain.model.Today
+import com.example.shared.domain.model.Today
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class TodayDto(
     val close: Double,
     val high: Double,
     val low: Double,
-    @SerializedName("market_cap")
+    @SerialName("market_cap")
     val marketCap: Long,
     val `open`: Double,
-    @SerializedName("time_close")
+    @SerialName("time_close")
     val timeClose: String,
-    @SerializedName("time_open")
+    @SerialName("time_open")
     val timeOpen: String,
     val volume: Long
 ){

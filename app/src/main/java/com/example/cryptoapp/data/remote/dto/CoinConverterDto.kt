@@ -1,22 +1,25 @@
 package com.example.cryptoapp.data.remote.dto
 
-import com.example.cryptoapp.domain.model.CoinConverter
+import com.example.shared.domain.model.CoinConverter
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class CoinConverterDto(
     val amount: Double,
-    @SerializedName("base_currency_id")
+    @SerialName("base_currency_id")
     val baseCurrencyId: String,
-    @SerializedName("base_currency_name")
+    @SerialName("base_currency_name")
     val baseCurrencyName: String,
-    @SerializedName("base_price_last_updated")
+    @SerialName("base_price_last_updated")
     val basePriceLastUpdated: String,
     val price: Double,
-    @SerializedName("quote_currency_id")
+    @SerialName("quote_currency_id")
     val quoteCurrencyId: String,
-    @SerializedName("quote_currency_name")
+    @SerialName("quote_currency_name")
     val quoteCurrencyName: String,
-    @SerializedName("quote_price_last_updated")
+    @SerialName("quote_price_last_updated")
     val quotePriceLastUpdated: String
 )
 

@@ -5,8 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cryptoapp.common.Resource
-import com.example.cryptoapp.domain.use_cases.coin_tools.GetCoinToolsUseCase
+import com.example.shared.common.Resource
+import com.example.shared.domain.use_cases.coin_tools.GetCoinToolsUseCase
 import com.example.cryptoapp.presentation.coin_tools.components.SelectionState
 import com.example.cryptoapp.presentation.coin_tools.components.ToolScreenState
 import com.example.cryptoapp.presentation.coin_tools.components.ToolsScreenEvents

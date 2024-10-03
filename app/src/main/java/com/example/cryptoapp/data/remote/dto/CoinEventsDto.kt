@@ -1,20 +1,23 @@
 package com.example.cryptoapp.data.remote.dto
 
 
-import com.example.cryptoapp.domain.model.CoinEvents
+import com.example.shared.domain.model.CoinEvents
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class CoinEventsDto (
     val date: String,
-    @SerializedName("date_to")
+    @SerialName("date_to")
     val dateTo: String,
     val description: String,
     val id: String,
-    @SerializedName("is_conference")
+    @SerialName("is_conference")
     val isConference: Boolean,
     val link: String,
     val name: String,
-    @SerializedName("proof_image_link")
+    @SerialName("proof_image_link")
     val proofImageLink: String
 )
 

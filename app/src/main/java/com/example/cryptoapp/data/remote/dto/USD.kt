@@ -1,10 +1,12 @@
 package com.example.cryptoapp.data.remote.dto
 
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class USD(
     val price: Double,
-    @SerializedName("volume_24h")
+    @SerialName("volume_24h")
     val volume24h: Double
 )

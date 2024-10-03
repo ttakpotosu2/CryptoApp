@@ -21,7 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
-import com.example.cryptoapp.domain.model.Coins
+import com.example.shared.domain.model.Coins
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Monorama
 

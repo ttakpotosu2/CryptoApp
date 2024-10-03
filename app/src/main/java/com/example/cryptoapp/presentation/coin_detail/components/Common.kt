@@ -48,9 +48,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.cryptoapp.data.remote.dto.TeamMember
-import com.example.cryptoapp.domain.model.CoinEvents
-import com.example.cryptoapp.domain.model.CoinMarket
-import com.example.cryptoapp.domain.model.Coins
+import com.example.shared.domain.model.CoinEvents
+import com.example.shared.domain.model.CoinMarket
+import com.example.shared.domain.model.Coins
 import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
@@ -223,8 +223,8 @@ fun CoinTag(
 
 @Composable
 fun CoinListItem(
-    coin: Coins,
-    onItemClick: () -> Unit
+	coin: Coins,
+	onItemClick: () -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.Top,
