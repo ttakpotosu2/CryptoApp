@@ -1,3 +1,4 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     repositories {
         google()
@@ -15,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CryptoApp"
 include(":app")
+include(":shared")
