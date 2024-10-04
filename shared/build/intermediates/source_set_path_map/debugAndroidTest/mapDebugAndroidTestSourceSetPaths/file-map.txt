@@ -1,0 +1,39 @@
+com.example.shared.test.shared-emoji2-1.0.0-0 C:\Program Files\Java\jdk-21\caches\transforms-4\0c039195f66c216f1da102ac42d73fa8\transformed\emoji2-1.0.0\res
+com.example.shared.test.shared-lifecycle-process-2.4.0-1 C:\Program Files\Java\jdk-21\caches\transforms-4\10979441a40138b4e8042e8c30498b2d\transformed\lifecycle-process-2.4.0\res
+com.example.shared.test.shared-navigation-common-ktx-2.4.0-2 C:\Program Files\Java\jdk-21\caches\transforms-4\14b467574b79d3e556eeb61e6a2d11e1\transformed\navigation-common-ktx-2.4.0\res
+com.example.shared.test.shared-ui-util-1.1.0-3 C:\Program Files\Java\jdk-21\caches\transforms-4\18fa79afb69b5ec04c483a4118fc68fd\transformed\ui-util-1.1.0\res
+com.example.shared.test.shared-fragment-1.4.0-4 C:\Program Files\Java\jdk-21\caches\transforms-4\295a1119d7972684c9c9747e17f8f79a\transformed\fragment-1.4.0\res
+com.example.shared.test.shared-lifecycle-viewmodel-2.3.1-5 C:\Program Files\Java\jdk-21\caches\transforms-4\3321cdd92777889655b4bc9d947714d2\transformed\lifecycle-viewmodel-2.3.1\res
+com.example.shared.test.shared-emoji2-views-helper-1.0.0-6 C:\Program Files\Java\jdk-21\caches\transforms-4\3ed87e463f43f73ba69509787e8b57ba\transformed\emoji2-views-helper-1.0.0\res
+com.example.shared.test.shared-ui-graphics-1.1.0-7 C:\Program Files\Java\jdk-21\caches\transforms-4\45b2f5e6154b75102904fb98271d38a0\transformed\ui-graphics-1.1.0\res
+com.example.shared.test.shared-appcompat-resources-1.4.1-8 C:\Program Files\Java\jdk-21\caches\transforms-4\4c8254e956aff295ac0338516348f590\transformed\appcompat-resources-1.4.1\res
+com.example.shared.test.shared-lifecycle-runtime-2.4.0-9 C:\Program Files\Java\jdk-21\caches\transforms-4\52551b143c9b79a5fedecb2e9e542414\transformed\lifecycle-runtime-2.4.0\res
+com.example.shared.test.shared-window-1.0.0-10 C:\Program Files\Java\jdk-21\caches\transforms-4\55b3dabfb6e462c6ffa50325de716808\transformed\window-1.0.0\res
+com.example.shared.test.shared-runtime-1.1.0-11 C:\Program Files\Java\jdk-21\caches\transforms-4\61b79e96f9f07d28d86f967b8b4e323d\transformed\runtime-1.1.0\res
+com.example.shared.test.shared-annotation-experimental-1.1.0-12 C:\Program Files\Java\jdk-21\caches\transforms-4\6283e78268954df25ec1a7dd9af263c0\transformed\annotation-experimental-1.1.0\res
+com.example.shared.test.shared-fragment-ktx-1.4.0-13 C:\Program Files\Java\jdk-21\caches\transforms-4\63ee5a1bcd5f0153dc58e3f83776f9e0\transformed\fragment-ktx-1.4.0\res
+com.example.shared.test.shared-ui-1.1.0-14 C:\Program Files\Java\jdk-21\caches\transforms-4\6501bcfa12509815ea75af7209ddf332\transformed\ui-1.1.0\res
+com.example.shared.test.shared-ui-geometry-1.1.0-15 C:\Program Files\Java\jdk-21\caches\transforms-4\6e46f8ee5cd1abf2d665ba6823b16abb\transformed\ui-geometry-1.1.0\res
+com.example.shared.test.shared-navigation-runtime-ktx-2.4.0-16 C:\Program Files\Java\jdk-21\caches\transforms-4\7d906b94973270411b515838fbfaabac\transformed\navigation-runtime-ktx-2.4.0\res
+com.example.shared.test.shared-savedstate-1.1.0-17 C:\Program Files\Java\jdk-21\caches\transforms-4\8c2d58f85822659235a97aecb5c18678\transformed\savedstate-1.1.0\res
+com.example.shared.test.shared-activity-ktx-1.4.0-18 C:\Program Files\Java\jdk-21\caches\transforms-4\af48fb12827b97ac3a989b447a258157\transformed\activity-ktx-1.4.0\res
+com.example.shared.test.shared-profileinstaller-1.1.0-19 C:\Program Files\Java\jdk-21\caches\transforms-4\b949b07988217ee739c27d7b66c5ed46\transformed\profileinstaller-1.1.0\res
+com.example.shared.test.shared-startup-runtime-1.0.0-20 C:\Program Files\Java\jdk-21\caches\transforms-4\bfbe2da7f679ce3eb0a99b6a50a42676\transformed\startup-runtime-1.0.0\res
+com.example.shared.test.shared-navigation-common-2.4.0-21 C:\Program Files\Java\jdk-21\caches\transforms-4\d4bc3f696be8654932fabc00d38beab0\transformed\navigation-common-2.4.0\res
+com.example.shared.test.shared-core-1.7.0-22 C:\Program Files\Java\jdk-21\caches\transforms-4\d6873636565019b458d6c84ad23f1c58\transformed\core-1.7.0\res
+com.example.shared.test.shared-slidingpanelayout-1.2.0-23 C:\Program Files\Java\jdk-21\caches\transforms-4\da22082dd9acaa50dfe20a40c437b41e\transformed\slidingpanelayout-1.2.0\res
+com.example.shared.test.shared-activity-1.4.0-24 C:\Program Files\Java\jdk-21\caches\transforms-4\dbc020eeaacb8c0005d444c0ce3e6b67\transformed\activity-1.4.0\res
+com.example.shared.test.shared-ui-text-1.1.0-25 C:\Program Files\Java\jdk-21\caches\transforms-4\dc1587e5fe97cbb2753c2d28102fe618\transformed\ui-text-1.1.0\res
+com.example.shared.test.shared-navigation-runtime-2.4.0-26 C:\Program Files\Java\jdk-21\caches\transforms-4\dd429d79f60de5c595f6cc6c870552f2\transformed\navigation-runtime-2.4.0\res
+com.example.shared.test.shared-appcompat-1.4.1-27 C:\Program Files\Java\jdk-21\caches\transforms-4\e0c62e964bde6f265f9f9cbca16e501a\transformed\appcompat-1.4.1\res
+com.example.shared.test.shared-navigation-fragment-ktx-2.4.0-28 C:\Program Files\Java\jdk-21\caches\transforms-4\e37b7e33ae00175425afb8ee99248d8c\transformed\navigation-fragment-ktx-2.4.0\res
+com.example.shared.test.shared-runtime-saveable-1.1.0-29 C:\Program Files\Java\jdk-21\caches\transforms-4\e5dc594328b3fbea8540274ec9a9aaf9\transformed\runtime-saveable-1.1.0\res
+com.example.shared.test.shared-transition-1.4.1-30 C:\Program Files\Java\jdk-21\caches\transforms-4\e8ebf5c8491ed32ebd602cf26835d01d\transformed\transition-1.4.1\res
+com.example.shared.test.shared-lifecycle-viewmodel-compose-2.4.0-31 C:\Program Files\Java\jdk-21\caches\transforms-4\f38350d8bf535a05f8a6d1af754178e2\transformed\lifecycle-viewmodel-compose-2.4.0\res
+com.example.shared.test.shared-navigation-fragment-2.4.0-32 C:\Program Files\Java\jdk-21\caches\transforms-4\f9f3a8ce457ed82d5e4b78f96c57f9b9\transformed\navigation-fragment-2.4.0\res
+com.example.shared.test.shared-ui-unit-1.1.0-33 C:\Program Files\Java\jdk-21\caches\transforms-4\ffa752f94591ed72d6600a610e96db39\transformed\ui-unit-1.1.0\res
+com.example.shared.test.shared-androidTest-34 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\resValues\androidTest\debug
+com.example.shared.test.shared-mergeDebugAndroidTestResources-35 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.shared.test.shared-mergeDebugAndroidTestResources-36 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.shared.test.shared-debugAndroidTest-37 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+com.example.shared.test.shared-debug-38 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\packaged_res\debug\packageDebugResources

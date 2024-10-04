@@ -1,19 +1,16 @@
 package com.example.shared.domain.use_cases.get_coin
 
-import com.example.cryptoapp.common.Resource
-import com.example.cryptoapp.data.remote.dto.TodayDto
-import com.example.shared.domain.model.CoinDetail
+import com.example.shared.common.Resource
 import com.example.shared.domain.model.Today
 import com.example.shared.domain.repository.CoinRepository
+import io.ktor.utils.io.errors.IOException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import retrofit2.HttpException
-import java.io.IOException
-import javax.inject.Inject
 
-class GetCoinTodayUseCase @Inject constructor(
+class GetCoinTodayUseCase (
     private val repository: CoinRepository
 ) {
 
@@ -22,8 +19,7 @@ class GetCoinTodayUseCase @Inject constructor(
             emit(Resource.Loading())
             val coinToday = repository.getCoinToday(coinId).map { it.toToday() }
             emit(Resource.Success(coinToday))
-        } catch (e: HttpException){
-            emit(Resource.Error(e.localizedMessage ?: "An Error Occurred!"))
+        
         } catch (e: IOException){
             emit(Resource.Error("Check Internet Connection!"))
         }

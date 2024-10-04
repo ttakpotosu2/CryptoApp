@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.shared-mergeReleaseResources-63:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "C:\\Program Files\\Java\\jdk-21\\caches\\transforms-4\\a06f3aa8e8c23dd38bf6d8cb5972113f\\transformed\\core-splashscreen-1.0.1\\res\\values-v29\\values-v29.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,374",
+                        "endLines": "6,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "369,464"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.example.shared-release-65:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "C:\\Program Files\\Java\\jdk-21\\caches\\transforms-4\\a06f3aa8e8c23dd38bf6d8cb5972113f\\transformed\\core-splashscreen-1.0.1\\res\\values-v29\\values-v29.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,374",
+                        "endLines": "6,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "369,464"
+                    }
+                }
+            ]
+        }
+    ]
+}

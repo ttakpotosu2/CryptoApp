@@ -1,7 +1,9 @@
 package com.example.shared.domain.model
 
-import com.example.cryptoapp.data.remote.dto.TickersQuotes
+import com.example.shared.data.remote.dto.TickersQuotes
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class CoinTicker(
     val betaValue: Double,
     val circulatingSupply: Long,

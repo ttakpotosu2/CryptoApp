@@ -1,10 +1,9 @@
 package com.example.shared.domain.model
 
-import com.example.cryptoapp.data.remote.dto.Links
-import com.example.cryptoapp.data.remote.dto.LinksExtended
-import com.example.cryptoapp.data.remote.dto.Tag
-import com.example.cryptoapp.data.remote.dto.TeamMember
-import com.example.cryptoapp.data.remote.dto.Whitepaper
+import com.example.shared.data.remote.dto.Links
+import com.example.shared.data.remote.dto.LinksExtended
+import com.example.shared.data.remote.dto.TeamMember
+import com.example.shared.data.remote.dto.Whitepaper
 
 data class CoinDetail(
     val description: String?,

@@ -5,14 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
-import com.example.cryptoapp.presentation.coin_tools.viewmodels.CoinToolsViewModel
-import com.example.cryptoapp.presentation.navigation.NavGraph
-import com.example.cryptoapp.presentation.ui.theme.CryptoAppTheme
-import dagger.hilt.android.AndroidEntryPoint
+import com.example.shared.presentation.coin_tools.viewmodels.CoinToolsViewModel
+import com.example.shared.presentation.navigation.NavGraph
+import com.example.shared.presentation.ui.theme.CryptoAppTheme
+import org.koin.androidx.compose.getKoin
 
-@AndroidEntryPoint
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CryptoAppTheme {
                 val navController = rememberNavController()
-                val viewModel: CoinToolsViewModel = hiltViewModel()
+                val viewModel: CoinToolsViewModel = getKoin().get()
                 NavGraph(navHostController = navController, events = viewModel::onEvent, state = viewModel.state)
             }
         }

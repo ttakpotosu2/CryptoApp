@@ -12,15 +12,10 @@ object Constants {
 object HttpRoutes {
     private const val BASE_URL = "https://api.coinpaprika.com"
     const val COINS = "$BASE_URL/v1/coins"
-    const val COIN = "$BASE_URL/v1/coins/"
     fun coin(id: String) = "$BASE_URL/v1/coins/{$id}"
     fun coinToday(id: String) = "$BASE_URL/v1/coins/{$id}/ohlcv/today"
     fun coinTicker(id: String) = "$BASE_URL/v1/tickers/{$id}"
     fun coinMarkets(id: String) = "$BASE_URL/v1/coins/{$id}/markets"
     fun coinEvents(id: String) = "$BASE_URL/v1/coins/{$id}/events"
-    fun converter(
-        baseCoinId: String,
-        quoteCoinId: String,
-        amount: Double,
-    ) = "$BASE_URL/v1/price-converter?base_currency_id=$baseCoinId&quote_currency_id=$quoteCoinId&amount=$amount"
+    const val CONVERT = "$BASE_URL/v1/price-converter"
 }

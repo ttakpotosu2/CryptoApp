@@ -1,20 +1,17 @@
 package com.example.shared.domain.use_cases.get_coin
 
-import com.example.cryptoapp.common.Resource
-import com.example.cryptoapp.data.remote.dto.CoinMarketDto
-import com.example.cryptoapp.data.remote.dto.toCoinMarket
+import com.example.shared.common.Resource
+import com.example.shared.data.remote.dto.toCoinMarket
 import com.example.shared.domain.model.CoinMarket
-import com.example.shared.domain.model.CoinTicker
 import com.example.shared.domain.repository.CoinRepository
+import io.ktor.utils.io.errors.IOException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import retrofit2.HttpException
-import java.io.IOException
-import javax.inject.Inject
 
-class GetCoinMarketsUseCase @Inject constructor(
+class GetCoinMarketsUseCase (
     private val repository: CoinRepository
 ) {
 
@@ -23,8 +20,6 @@ class GetCoinMarketsUseCase @Inject constructor(
             emit(Resource.Loading())
             val coinMarkets = repository.getCoinMarkets(coinId).map { it.toCoinMarket() }
             emit(Resource.Success(coinMarkets))
-        } catch (e: HttpException){
-            emit(Resource.Error(e.localizedMessage ?: "An Error Occurred!"))
         } catch (e: IOException){
             emit(Resource.Error("Check Internet Connection!"))
         }

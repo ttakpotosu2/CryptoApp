@@ -1,12 +1,12 @@
 package com.example.shared.domain.repository
 
-import com.example.cryptoapp.data.remote.dto.CoinConverterDto
-import com.example.cryptoapp.data.remote.dto.CoinDetailDto
-import com.example.cryptoapp.data.remote.dto.CoinEventsDto
-import com.example.cryptoapp.data.remote.dto.CoinMarketDto
-import com.example.cryptoapp.data.remote.dto.CoinTickerDto
-import com.example.cryptoapp.data.remote.dto.CoinsDto
-import com.example.cryptoapp.data.remote.dto.TodayDto
+import com.example.shared.data.remote.dto.CoinConverterDto
+import com.example.shared.data.remote.dto.CoinDetailDto
+import com.example.shared.data.remote.dto.CoinEventsDto
+import com.example.shared.data.remote.dto.CoinMarketDto
+import com.example.shared.data.remote.dto.CoinTickerDto
+import com.example.shared.data.remote.dto.CoinsDto
+import com.example.shared.data.remote.dto.TodayDto
 
 interface CoinRepository {
 
