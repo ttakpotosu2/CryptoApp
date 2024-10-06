@@ -14,7 +14,7 @@ data class ToolScreenState(
     val price: Double = 1.0,
     val error: String? = null,
     val selection: SelectionState = SelectionState.FROM,
-    val numberFormat: DecimalFormat = DecimalFormat("#0.000000000"),
+    val numberFormat: DecimalFormat = DecimalFormat("#0,000.000"),
     val toValue: String = numberFormat.format((amount * price))
 )
 

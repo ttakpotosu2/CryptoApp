@@ -1,0 +1,8 @@
+com.example.shared-pngs-0 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\pngs\release
+com.example.shared-resValues-1 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\resValues\release
+com.example.shared-mergeReleaseResources-2 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.shared-mergeReleaseResources-3 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.shared-merged_res-4 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\merged_res\release
+com.example.shared-androidMain-5 D:\AndroidStudioProjects\CryptoApp\shared\src\androidMain\res
+com.example.shared-main-6 D:\AndroidStudioProjects\CryptoApp\shared\src\main\res
+com.example.shared-release-7 D:\AndroidStudioProjects\CryptoApp\shared\src\release\res

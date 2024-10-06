@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -55,7 +55,7 @@ android {
 
 dependencies {
     
-   implementation(projects.shared)
+   api(projects.shared)
 
     implementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -94,12 +94,6 @@ dependencies {
     kapt (libs.androidx.hilt.compiler)
     implementation (libs.androidx.hilt.navigation.compose)
 
-    // Retrofit
-    implementation (libs.retrofit)
-    implementation (libs.converter.gson)
-    implementation (libs.okhttp)
-    implementation (libs.logging.interceptor)
-
     //Coil
     implementation(libs.coil.compose)
 
@@ -111,4 +105,8 @@ dependencies {
 
     //Splashscreen
     implementation(libs.androidx.core.splashscreen)
+}
+
+kapt {
+    correctErrorTypes = true
 }

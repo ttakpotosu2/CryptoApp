@@ -1,19 +1,18 @@
 package com.example.cryptoapp.domain.use_cases.coin_tools
 
 import com.example.cryptoapp.common.Resource
-import com.example.cryptoapp.data.remote.dto.toCoinConverter
-import com.example.cryptoapp.domain.model.CoinConverter
-import com.example.cryptoapp.domain.repository.CoinRepository
+import com.example.cryptoapp.data.repository.CoinRepositoryImpl
+import com.example.shared.data.remote.dto.toCoinConverter
+import com.example.shared.domain.model.CoinConverter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
 class GetCoinToolsUseCase @Inject constructor(
-    private val repository: CoinRepository
+    private val repository: CoinRepositoryImpl
 ) {
     fun getCoinConverter(
 		amount: Double,
@@ -28,8 +27,6 @@ class GetCoinToolsUseCase @Inject constructor(
                 amount = amount
             ).toCoinConverter()
             emit(Resource.Success(coinConverter))
-        } catch (e: HttpException){
-            emit(Resource.Error(e.localizedMessage ?: "An Error Occurred!"))
         } catch (e: IOException){
             emit(Resource.Error("Check Internet Connection!"))
         }

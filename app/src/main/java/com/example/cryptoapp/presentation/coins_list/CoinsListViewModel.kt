@@ -1,6 +1,6 @@
 package com.example.cryptoapp.presentation.coins_list
 
-import androidx.compose.material3.CircularProgressIndicator
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel

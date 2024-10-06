@@ -1,0 +1,112 @@
+[
+  {
+    "moduleId": "module io.ktor:ktor-client-core:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-client-core-3.0.0-beta-2-commonMain-hG94Nw.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.kotlin:kotlin-stdlib:2.0.20",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlin-kotlin-stdlib-2.0.20-commonMain-WPEnbA.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-client-json:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-client-json-3.0.0-beta-2-commonMain-A6FjPg.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-serialization-kotlinx-json:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-serialization-kotlinx-json-3.0.0-beta-2-commonMain-BegrLg.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-client-serialization:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-client-serialization-3.0.0-beta-2-commonMain-65kM2A.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-client-content-negotiation:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-client-content-negotiation-3.0.0-beta-2-commonMain-3IVT-g.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-client-logging:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-client-logging-3.0.0-beta-2-commonMain-_WBU2w.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-coroutines-core-1.8.0-concurrentMain-UxhG-g.klib",
+    "sourceSetName": "concurrentMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-coroutines-core-1.8.0-commonMain-UxhG-g.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-http:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-http-3.0.0-beta-2-commonMain-dXaLTA.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-events:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-events-3.0.0-beta-2-commonMain-Ye5X9A.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-websocket-serialization:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-websocket-serialization-3.0.0-beta-2-commonMain-0WaLeA.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-sse:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-sse-3.0.0-beta-2-commonMain-835CmQ.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-serialization-kotlinx:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-serialization-kotlinx-3.0.0-beta-2-commonMain-eK13mw.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.1",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-serialization-json-1.6.1-commonMain-tPQfig.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-serialization:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-serialization-3.0.0-beta-2-commonMain-TljJnw.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-utils:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-utils-3.0.0-beta-2-commonMain-b93wzQ.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.1",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-serialization-core-1.6.1-commonMain-MFMYCQ.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-websockets:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-websockets-3.0.0-beta-2-commonMain-wbp6vA.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.ktor:ktor-io:3.0.0-beta-2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.ktor-ktor-io-3.0.0-beta-2-commonMain-zK4gkQ.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.kotlinx:kotlinx-io-core:0.5.1",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-io-core-0.5.1-commonMain-0pC9uQ.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.kotlinx:kotlinx-io-bytestring:0.5.1",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-io-bytestring-0.5.1-commonMain-L04fpA.klib",
+    "sourceSetName": "commonMain"
+  }
+]

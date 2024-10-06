@@ -5,8 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cryptoapp.common.Constants
 import com.example.cryptoapp.common.Resource
+import com.example.shared.common.Constants
 import com.example.cryptoapp.domain.use_cases.get_coin.GetCoinTickerUseCase
 import com.example.cryptoapp.presentation.coin_detail.components.states.CoinTickerState
 import dagger.hilt.android.lifecycle.HiltViewModel

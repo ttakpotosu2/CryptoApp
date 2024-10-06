@@ -22,7 +22,7 @@ class CoinToolsViewModel @Inject constructor(
 ) : ViewModel() {
     
     var state by mutableStateOf(ToolScreenState())
-    private val numberFormat = DecimalFormat("#0.0000000000")
+    private val numberFormat = DecimalFormat("#0.00000")
     
     init {
     	getCoinRates(

@@ -1,0 +1,2 @@
+
+<shared_commonMain>:com.example.shared:com.example.shared.common:com.example.shared.data.remote:"com.example.shared.data.remote.dto:com.example.shared.domain.model:$com.example.shared.domain.repository
