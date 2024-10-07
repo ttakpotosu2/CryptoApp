@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml:2:13-83
-INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml:2:13-83
+ADDED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml:2:13-83
+INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml:2:13-83
 	package
-		INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml
+		INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml
 	xmlns:android
-		ADDED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml:2:23-81
+		ADDED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml:2:23-81
 uses-sdk
-INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml reason: use-sdk injection requested
-INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml
-INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml
+INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml
+INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml
 	android:targetSdkVersion
-		INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml
+		INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml
 	android:minSdkVersion
-		INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest3108435085518168889.xml
+		INJECTED from D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest15824556188647754297.xml

@@ -21,7 +21,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.compose.ui.graphics.Color.Companion.Green
 import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.graphics.Color.Companion.White
@@ -32,24 +31,26 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import co.yml.charts.common.extensions.isNotNull
 import coil.compose.SubcomposeAsyncImage
 import com.example.cryptoapp.presentation.bottomNavBar.CryptoAppBottomNavBar
 import com.example.cryptoapp.presentation.coin_detail.components.CoinDetailTabs
-import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinDetailViewModel
-import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinTickerViewModel
+import com.example.shared.presentation.viewmodels.CoinDetailViewModel
+import com.example.shared.presentation.viewmodels.CoinTickerViewModel
 import com.example.cryptoapp.presentation.ui.big
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
 import com.example.cryptoapp.presentation.ui.theme.Monorama
 import com.valentinilk.shimmer.shimmer
+import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
 
+@OptIn(KoinExperimentalAPI::class)
 @Composable
 fun CoinDetailScreen(
-    coinTickerViewModel: CoinTickerViewModel = hiltViewModel(),
-    coinDetailViewModel: CoinDetailViewModel = hiltViewModel(),
+    coinTickerViewModel: CoinTickerViewModel = koinViewModel(),
+    coinDetailViewModel: CoinDetailViewModel = koinViewModel(),
     navController: NavController
 ) {
     val coinTickerState = coinTickerViewModel.state.value

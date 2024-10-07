@@ -1,6 +1,5 @@
 package com.example.cryptoapp.presentation.coin_tools
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
@@ -19,8 +18,8 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Card
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -41,28 +40,26 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.cryptoapp.R
 import com.example.cryptoapp.presentation.bottomNavBar.CryptoAppBottomNavBar
-import com.example.cryptoapp.presentation.coin_tools.components.BottomSheetContent
-import com.example.cryptoapp.presentation.coin_tools.components.CurrencyRow
-import com.example.cryptoapp.presentation.coin_tools.components.CustomKeyboard
-import com.example.cryptoapp.presentation.coin_tools.components.SelectionState
-import com.example.cryptoapp.presentation.coin_tools.components.ToolScreenState
-import com.example.cryptoapp.presentation.coin_tools.components.ToolsScreenEvents
-import com.example.cryptoapp.presentation.coins_list.CoinsListViewModel
+import com.example.shared.presentation.states.SelectionState
+import com.example.shared.presentation.states.ToolScreenState
+import com.example.shared.presentation.states.ToolsScreenEvents
+import com.example.shared.presentation.viewmodels.CoinsListViewModel
 import com.example.cryptoapp.presentation.ui.big
 import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.none
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.veryBig
 import kotlinx.coroutines.launch
+import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
+@OptIn(ExperimentalMaterial3Api::class, KoinExperimentalAPI::class)
 @Composable
 fun CoinToolsScreen(
-	coinsListViewModel: CoinsListViewModel = hiltViewModel(),
+	coinsListViewModel: CoinsListViewModel = koinViewModel(),
 	navController: NavController,
 	state: ToolScreenState,
 	onEvents: (ToolsScreenEvents) -> Unit
@@ -87,7 +84,7 @@ fun CoinToolsScreen(
 					BottomSheetDefaults.DragHandle()
 					Text(text = "Select Currency")
 					Spacer(modifier = Modifier.height(medium))
-					Divider()
+					HorizontalDivider()
 				}
 			}
 		) {
@@ -105,7 +102,7 @@ fun CoinToolsScreen(
 	
 	Scaffold(
 		bottomBar = {
-			Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
+			HorizontalDivider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
 			CryptoAppBottomNavBar(
 				modifier = Modifier
 					.height(80.dp)

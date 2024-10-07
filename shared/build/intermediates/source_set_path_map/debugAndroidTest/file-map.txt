@@ -1,5 +1,6 @@
-com.example.shared.test.shared-androidTest-0 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\resValues\androidTest\debug
-com.example.shared.test.shared-mergeDebugAndroidTestResources-1 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.shared.test.shared-mergeDebugAndroidTestResources-2 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.shared.test.shared-merged_res-3 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\merged_res\debugAndroidTest
-com.example.shared.test.shared-packaged_res-4 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\packaged_res\debug
+com.example.shared.test.shared-runtime-release-0 C:\Program Files\Java\jdk-21\caches\transforms-3\de676782005eee1398b0e69817b0eada\transformed\runtime-release\res
+com.example.shared.test.shared-androidTest-1 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\resValues\androidTest\debug
+com.example.shared.test.shared-mergeDebugAndroidTestResources-2 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.shared.test.shared-mergeDebugAndroidTestResources-3 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.shared.test.shared-merged_res-4 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\merged_res\debugAndroidTest
+com.example.shared.test.shared-packaged_res-5 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\packaged_res\debug

@@ -1,19 +1,16 @@
 package com.example.cryptoapp.presentation.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.cryptoapp.presentation.coin_detail.CoinDetailScreen
 import com.example.cryptoapp.presentation.coin_tools.CoinToolsScreen
-import com.example.cryptoapp.presentation.coin_tools.components.ToolScreenState
-import com.example.cryptoapp.presentation.coin_tools.components.ToolsScreenEvents
-import com.example.cryptoapp.presentation.coin_tools.viewmodels.CoinToolsViewModel
+import com.example.shared.presentation.states.ToolScreenState
+import com.example.shared.presentation.states.ToolsScreenEvents
 import com.example.cryptoapp.presentation.coins_list.CoinsScreen
 import com.example.cryptoapp.presentation.home_screen.HomeScreen
 import com.example.cryptoapp.presentation.onboarding.OnBoardingScreen
-import com.example.cryptoapp.presentation.tools.ToolsScreen
 
 @Composable
 fun NavGraph(

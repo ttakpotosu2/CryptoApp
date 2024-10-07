@@ -2,9 +2,10 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.ksp)
     
-    id("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
+//    id("kotlin-kapt")
+//    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -89,10 +90,19 @@ dependencies {
     implementation (libs.androidx.lifecycle.runtime.ktx)
 
     //Dagger - Hilt
-    implementation (libs.hilt.android)
-    kapt (libs.hilt.android.compiler)
-    kapt (libs.androidx.hilt.compiler)
-    implementation (libs.androidx.hilt.navigation.compose)
+//    implementation (libs.hilt.android)
+//    kapt (libs.hilt.android.compiler)
+//    kapt (libs.androidx.hilt.compiler)
+//    implementation (libs.androidx.hilt.navigation.compose)
+    
+    implementation(platform("io.insert-koin:koin-bom:3.5.3"))
+    implementation("io.insert-koin:koin-core")
+    implementation("io.insert-koin:koin-android")
+    implementation("io.insert-koin:koin-compose-viewmodel:1.2.0-Beta4")
+    
+    // Annotations
+    implementation("io.insert-koin:koin-annotations:1.3.0")
+    ksp("io.insert-koin:koin-ksp-compiler:1.3.0")
 
     //Coil
     implementation(libs.coil.compose)
@@ -107,6 +117,6 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
 }
 
-kapt {
-    correctErrorTypes = true
-}
+//kapt {
+//    correctErrorTypes = true
+//}

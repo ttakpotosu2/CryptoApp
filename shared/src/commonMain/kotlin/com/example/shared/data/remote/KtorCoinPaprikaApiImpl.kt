@@ -14,7 +14,9 @@ import io.ktor.client.request.get
 import io.ktor.client.request.parameter
 import io.ktor.http.URLProtocol
 import io.ktor.http.path
+import org.koin.core.annotation.Single
 
+@Single
 class KtorCoinPaprikaApiImpl (
 	private val client: HttpClient
 ): KtorCoinPaprikaApi {

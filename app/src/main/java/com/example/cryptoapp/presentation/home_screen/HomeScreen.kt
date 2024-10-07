@@ -5,8 +5,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +17,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -37,16 +36,14 @@ import com.example.cryptoapp.presentation.ui.big
 import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.small
 import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
-import androidx.compose.ui.layout.Layout
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun HomeScreen(
     navController: NavController
 ) {
     Scaffold(
         bottomBar = {
-            Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
+            HorizontalDivider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
             CryptoAppBottomNavBar(
                 modifier = Modifier
                     .height(80.dp)

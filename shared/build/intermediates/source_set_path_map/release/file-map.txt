@@ -1,8 +1,45 @@
-com.example.shared-pngs-0 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\pngs\release
-com.example.shared-resValues-1 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\resValues\release
-com.example.shared-mergeReleaseResources-2 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.example.shared-mergeReleaseResources-3 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.example.shared-merged_res-4 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\merged_res\release
-com.example.shared-androidMain-5 D:\AndroidStudioProjects\CryptoApp\shared\src\androidMain\res
-com.example.shared-main-6 D:\AndroidStudioProjects\CryptoApp\shared\src\main\res
-com.example.shared-release-7 D:\AndroidStudioProjects\CryptoApp\shared\src\release\res
+com.example.shared-core-1.12.0-0 C:\Program Files\Java\jdk-21\caches\transforms-3\03f747111dda319ab16e88ce4e3ffcdb\transformed\core-1.12.0\res
+com.example.shared-ui-graphics-release-1 C:\Program Files\Java\jdk-21\caches\transforms-3\0c252b5dc5898dd6bcab358e625cfcde\transformed\ui-graphics-release\res
+com.example.shared-core-runtime-2.2.0-2 C:\Program Files\Java\jdk-21\caches\transforms-3\2c73bd9a3b4b0e71a606b0e266a467be\transformed\core-runtime-2.2.0\res
+com.example.shared-ui-release-3 C:\Program Files\Java\jdk-21\caches\transforms-3\4aeec3d60efba7386793ed5b529535dd\transformed\ui-release\res
+com.example.shared-lifecycle-viewmodel-ktx-2.8.0-4 C:\Program Files\Java\jdk-21\caches\transforms-3\4c54ad359d799f5240b07dcf123bfba8\transformed\lifecycle-viewmodel-ktx-2.8.0\res
+com.example.shared-lifecycle-viewmodel-release-5 C:\Program Files\Java\jdk-21\caches\transforms-3\55dc652b47c3321fe1e131a762950aa6\transformed\lifecycle-viewmodel-release\res
+com.example.shared-runtime-release-6 C:\Program Files\Java\jdk-21\caches\transforms-3\584ef0d34cf339e342c87d6510f29ee6\transformed\runtime-release\res
+com.example.shared-animation-release-7 C:\Program Files\Java\jdk-21\caches\transforms-3\5c45dae0031567fba607212a3c7c89bd\transformed\animation-release\res
+com.example.shared-core-ktx-1.12.0-8 C:\Program Files\Java\jdk-21\caches\transforms-3\5dadc466047ed75562b24cc9bdc1523e\transformed\core-ktx-1.12.0\res
+com.example.shared-lifecycle-viewmodel-compose-release-9 C:\Program Files\Java\jdk-21\caches\transforms-3\60e6b874e38b6c695e72b516b06d4e61\transformed\lifecycle-viewmodel-compose-release\res
+com.example.shared-savedstate-ktx-1.2.1-10 C:\Program Files\Java\jdk-21\caches\transforms-3\61bb173baefe988c901b3ce2b4ca3b35\transformed\savedstate-ktx-1.2.1\res
+com.example.shared-profileinstaller-1.3.1-11 C:\Program Files\Java\jdk-21\caches\transforms-3\709b1e117e052d032ead1c538f086aa7\transformed\profileinstaller-1.3.1\res
+com.example.shared-navigation-compose-2.7.7-12 C:\Program Files\Java\jdk-21\caches\transforms-3\71395944026ee11c27fff5d0b59bb9db\transformed\navigation-compose-2.7.7\res
+com.example.shared-ui-text-release-13 C:\Program Files\Java\jdk-21\caches\transforms-3\717e24478ffdbfd4d32b651b5ad4c143\transformed\ui-text-release\res
+com.example.shared-activity-1.7.1-14 C:\Program Files\Java\jdk-21\caches\transforms-3\7a2108ca67608688907f23204c5c9654\transformed\activity-1.7.1\res
+com.example.shared-lifecycle-viewmodel-savedstate-2.8.0-15 C:\Program Files\Java\jdk-21\caches\transforms-3\7ea0701bc14c9880efaf57930bd719a5\transformed\lifecycle-viewmodel-savedstate-2.8.0\res
+com.example.shared-ui-geometry-release-16 C:\Program Files\Java\jdk-21\caches\transforms-3\992f29f3bc82fb06a085557c194caf32\transformed\ui-geometry-release\res
+com.example.shared-navigation-common-2.7.7-17 C:\Program Files\Java\jdk-21\caches\transforms-3\99baaa2fa81193ec437f88f7489f7969\transformed\navigation-common-2.7.7\res
+com.example.shared-annotation-experimental-1.3.0-18 C:\Program Files\Java\jdk-21\caches\transforms-3\a2a747cd8567c5571f2345bd7ec4b802\transformed\annotation-experimental-1.3.0\res
+com.example.shared-lifecycle-process-2.8.0-19 C:\Program Files\Java\jdk-21\caches\transforms-3\a5319356b996e00e9eefe88f614c05c0\transformed\lifecycle-process-2.8.0\res
+com.example.shared-navigation-common-ktx-2.7.7-20 C:\Program Files\Java\jdk-21\caches\transforms-3\ae9912129fc899cd4de049b94fa81762\transformed\navigation-common-ktx-2.7.7\res
+com.example.shared-navigation-runtime-2.7.7-21 C:\Program Files\Java\jdk-21\caches\transforms-3\b45e25a48fd7866275c50b5bafb5dda5\transformed\navigation-runtime-2.7.7\res
+com.example.shared-activity-ktx-1.7.1-22 C:\Program Files\Java\jdk-21\caches\transforms-3\b9c8a37d0c9712d6f8e691560267f00c\transformed\activity-ktx-1.7.1\res
+com.example.shared-animation-core-release-23 C:\Program Files\Java\jdk-21\caches\transforms-3\bc5d1a2b9beb6ea0efda0ccdfe22d99b\transformed\animation-core-release\res
+com.example.shared-activity-compose-1.7.1-24 C:\Program Files\Java\jdk-21\caches\transforms-3\bd1397b35d902e1900e4007f6e2f0afd\transformed\activity-compose-1.7.1\res
+com.example.shared-lifecycle-runtime-release-25 C:\Program Files\Java\jdk-21\caches\transforms-3\bd5a0d1563112dfc9f48a42a3cefde21\transformed\lifecycle-runtime-release\res
+com.example.shared-runtime-saveable-release-26 C:\Program Files\Java\jdk-21\caches\transforms-3\c1336b1d81fc1340bfea34341bf29f49\transformed\runtime-saveable-release\res
+com.example.shared-foundation-layout-release-27 C:\Program Files\Java\jdk-21\caches\transforms-3\c6533d6a19187830f5200a94325caf6f\transformed\foundation-layout-release\res
+com.example.shared-startup-runtime-1.1.1-28 C:\Program Files\Java\jdk-21\caches\transforms-3\c8982a43877c4d416c85a8e7bad8954f\transformed\startup-runtime-1.1.1\res
+com.example.shared-lifecycle-runtime-ktx-release-29 C:\Program Files\Java\jdk-21\caches\transforms-3\ca40da33ede0b66fa844ad945edf355a\transformed\lifecycle-runtime-ktx-release\res
+com.example.shared-ui-unit-release-30 C:\Program Files\Java\jdk-21\caches\transforms-3\cbc14cf76df8442bd067a15feb4d286d\transformed\ui-unit-release\res
+com.example.shared-navigation-runtime-ktx-2.7.7-31 C:\Program Files\Java\jdk-21\caches\transforms-3\cd06c17cbc2c54873b8e83cd0ff5208b\transformed\navigation-runtime-ktx-2.7.7\res
+com.example.shared-ui-util-release-32 C:\Program Files\Java\jdk-21\caches\transforms-3\cfbb5536d3137d8e2a903730fbf36761\transformed\ui-util-release\res
+com.example.shared-emoji2-1.2.0-33 C:\Program Files\Java\jdk-21\caches\transforms-3\ed4c2cefffb8568f72fdd21576251195\transformed\emoji2-1.2.0\res
+com.example.shared-savedstate-1.2.1-34 C:\Program Files\Java\jdk-21\caches\transforms-3\f1ac43155ceef173a0251c37e306385d\transformed\savedstate-1.2.1\res
+com.example.shared-lifecycle-livedata-core-2.8.0-35 C:\Program Files\Java\jdk-21\caches\transforms-3\f74b67f6d802331d6faafc61ea8ba051\transformed\lifecycle-livedata-core-2.8.0\res
+com.example.shared-customview-poolingcontainer-1.0.0-36 C:\Program Files\Java\jdk-21\caches\transforms-3\f7f680bc4b297f8c53b741df16b9c8e5\transformed\customview-poolingcontainer-1.0.0\res
+com.example.shared-pngs-37 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\pngs\release
+com.example.shared-resValues-38 D:\AndroidStudioProjects\CryptoApp\shared\build\generated\res\resValues\release
+com.example.shared-mergeReleaseResources-39 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.shared-mergeReleaseResources-40 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.shared-merged_res-41 D:\AndroidStudioProjects\CryptoApp\shared\build\intermediates\merged_res\release
+com.example.shared-androidMain-42 D:\AndroidStudioProjects\CryptoApp\shared\src\androidMain\res
+com.example.shared-main-43 D:\AndroidStudioProjects\CryptoApp\shared\src\main\res
+com.example.shared-release-44 D:\AndroidStudioProjects\CryptoApp\shared\src\release\res

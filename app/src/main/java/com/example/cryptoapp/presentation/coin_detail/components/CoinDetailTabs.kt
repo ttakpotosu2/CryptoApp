@@ -1,6 +1,5 @@
 package com.example.cryptoapp.presentation.coin_detail.components
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.pager.HorizontalPager
@@ -16,13 +15,10 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
 import com.example.cryptoapp.presentation.ui.theme.Monorama
 
-
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun CoinDetailTabs() {
     var tabIndex by remember { mutableIntStateOf(0) }

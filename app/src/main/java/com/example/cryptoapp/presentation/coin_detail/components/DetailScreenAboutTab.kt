@@ -20,20 +20,21 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import co.yml.charts.common.utils.DataUtils
 import com.example.cryptoapp.presentation.coin_detail.components.charts.SingleLineChart
-import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinDetailViewModel
-import com.example.cryptoapp.presentation.coin_detail.viewmodels.CoinTickerViewModel
+import com.example.shared.presentation.viewmodels.CoinDetailViewModel
+import com.example.shared.presentation.viewmodels.CoinTickerViewModel
 import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.theme.Chakrapetch
 import com.example.cryptoapp.presentation.ui.theme.Monorama
+import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
 
-@OptIn(ExperimentalLayoutApi::class)
+@OptIn(ExperimentalLayoutApi::class, KoinExperimentalAPI::class)
 @Composable
 fun DetailScreenAboutTab(
-    coinTickerViewModel: CoinTickerViewModel = hiltViewModel(),
-    coinDetailViewModel: CoinDetailViewModel = hiltViewModel()
+    coinTickerViewModel: CoinTickerViewModel = koinViewModel(),
+    coinDetailViewModel: CoinDetailViewModel = koinViewModel()
 ) {
     val coinTickerState = coinTickerViewModel.state.value
     val coinDetailState = coinDetailViewModel.state.value

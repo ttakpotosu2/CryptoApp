@@ -7,6 +7,8 @@ import com.example.shared.data.remote.dto.CoinMarketDto
 import com.example.shared.data.remote.dto.CoinTickerDto
 import com.example.shared.data.remote.dto.CoinsDto
 import com.example.shared.data.remote.dto.TodayDto
+import org.koin.core.annotation.Single
+
 
 interface CoinRepository {
 

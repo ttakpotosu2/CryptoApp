@@ -69,7 +69,12 @@
           "io.ktor:ktor-serialization-kotlinx-json",
           "io.ktor:ktor-client-serialization",
           "io.ktor:ktor-client-content-negotiation",
-          "io.ktor:ktor-client-logging"
+          "io.ktor:ktor-client-logging",
+          "io.insert-koin:koin-bom",
+          "io.insert-koin:koin-core",
+          "io.insert-koin:koin-compose",
+          "io.insert-koin:koin-annotations",
+          "io.insert-koin:koin-compose-viewmodel"
         ],
         "sourceSetCInteropMetadataDirectory": "appleMain-cinterop",
         "binaryLayout": "klib",
@@ -97,7 +102,12 @@
           "io.ktor:ktor-serialization-kotlinx-json",
           "io.ktor:ktor-client-serialization",
           "io.ktor:ktor-client-content-negotiation",
-          "io.ktor:ktor-client-logging"
+          "io.ktor:ktor-client-logging",
+          "io.insert-koin:koin-bom",
+          "io.insert-koin:koin-core",
+          "io.insert-koin:koin-compose",
+          "io.insert-koin:koin-annotations",
+          "io.insert-koin:koin-compose-viewmodel"
         ],
         "sourceSetCInteropMetadataDirectory": "iosMain-cinterop",
         "binaryLayout": "klib",
@@ -116,6 +126,11 @@
           "io.ktor:ktor-client-serialization",
           "io.ktor:ktor-client-content-negotiation",
           "io.ktor:ktor-client-logging",
+          "io.insert-koin:koin-bom",
+          "io.insert-koin:koin-core",
+          "io.insert-koin:koin-compose",
+          "io.insert-koin:koin-annotations",
+          "io.insert-koin:koin-compose-viewmodel",
           "io.ktor:ktor-client-darwin"
         ],
         "sourceSetCInteropMetadataDirectory": "nativeMain-cinterop",

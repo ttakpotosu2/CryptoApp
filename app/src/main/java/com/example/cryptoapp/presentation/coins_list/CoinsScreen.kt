@@ -16,8 +16,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Divider
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -26,41 +24,34 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.cryptoapp.presentation.coin_detail.components.CoinListItem
-import com.valentinilk.shimmer.shimmer
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavController
-import coil.ImageLoader
 import com.example.cryptoapp.R
 import com.example.cryptoapp.presentation.bottomNavBar.CryptoAppBottomNavBar
+import com.example.cryptoapp.presentation.coin_detail.components.CoinListItem
 import com.example.cryptoapp.presentation.ui.big
 import com.example.cryptoapp.presentation.ui.medium
 import com.example.cryptoapp.presentation.ui.none
 import com.example.cryptoapp.presentation.ui.small
-import com.example.cryptoapp.presentation.ui.theme.Kadwa
 import com.example.cryptoapp.presentation.ui.theme.Monorama
-import com.example.cryptoapp.presentation.ui.veryBig
-import com.example.cryptoapp.presentation.ui.verySmall
+import com.example.shared.presentation.viewmodels.CoinsListViewModel
+import com.valentinilk.shimmer.shimmer
+import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.annotation.KoinExperimentalAPI
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
+@OptIn(KoinExperimentalAPI::class)
 @Composable
 fun CoinsScreen(
-	viewModel: CoinsListViewModel = hiltViewModel(),
+	viewModel: CoinsListViewModel = koinViewModel(),
 	toCoinDetailScreen: (String) -> Unit,
 	navController: NavController
 ) {
@@ -69,8 +60,8 @@ fun CoinsScreen(
 			HorizontalDivider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
 			CryptoAppBottomNavBar(
 				modifier = Modifier
-                    .height(80.dp)
-                    .padding(horizontal = big, vertical = small),
+					.height(80.dp)
+					.padding(horizontal = big, vertical = small),
 				navController = navController
 			)
 		}
