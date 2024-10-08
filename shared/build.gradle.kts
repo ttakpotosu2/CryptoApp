@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.KotlinCompile
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
 plugins {
@@ -6,6 +5,8 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.compose.compiler)
 }
 
 kotlin {
@@ -41,14 +42,13 @@ kotlin {
             implementation(libs.ktor.client.logging)
             
             ///// KOIN /////
-            implementation(project.dependencies.platform("io.insert-koin:koin-bom:3.5.3"))
-            implementation("io.insert-koin:koin-core")
-            implementation("io.insert-koin:koin-compose")
+            implementation(project.dependencies.platform(libs.koin.bom))
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
+            implementation(libs.koin.compose.navigation)
             // Only required if you want to use koin annotations
-            implementation("io.insert-koin:koin-annotations:1.3.0")
-            
-            implementation("io.insert-koin:koin-compose-viewmodel:1.2.0-Beta4")
-//            implementation("io.insert-koin:koin-compose-viewmodel-navigation:1.2.0-Beta4")
+            implementation(libs.koin.annotations)
             
         }
         androidMain.dependencies {

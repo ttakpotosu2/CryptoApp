@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
 data class CoinEventsDto (
     val date: String,
     @SerialName("date_to")
-    val dateTo: String,
+    val dateTo: String? = null,
     val description: String,
     val id: String,
     @SerialName("is_conference")
@@ -16,7 +16,7 @@ data class CoinEventsDto (
     val link: String,
     val name: String,
     @SerialName("proof_image_link")
-    val proofImageLink: String
+    val proofImageLink: String? = null
 )
 
 fun CoinEventsDto.toEvents(): CoinEvents {
@@ -24,4 +24,3 @@ fun CoinEventsDto.toEvents(): CoinEvents {
         date, dateTo, description, id, isConference, link, name, proofImageLink
     )
 }
-

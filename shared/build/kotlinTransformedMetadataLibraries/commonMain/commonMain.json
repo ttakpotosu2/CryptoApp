@@ -35,23 +35,28 @@
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module io.insert-koin:koin-core:3.6.0-Beta4",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-core-3.6.0-Beta4-commonMain-D40HQw.klib",
+    "moduleId": "module io.insert-koin:koin-core:4.0.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-core-4.0.0-commonMain-CvvNiA.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module io.insert-koin:koin-compose:1.2.0-Beta4",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-compose-1.2.0-Beta4-commonMain-yOsgXQ.klib",
+    "moduleId": "module io.insert-koin:koin-compose:4.0.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-compose-4.0.0-commonMain-QYyzSQ.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.insert-koin:koin-compose-viewmodel:4.0.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-compose-viewmodel-4.0.0-commonMain-Lzy-yA.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module io.insert-koin:koin-compose-viewmodel-navigation:4.0.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-compose-viewmodel-navigation-4.0.0-commonMain-KIvFCQ.klib",
     "sourceSetName": "commonMain"
   },
   {
     "moduleId": "module io.insert-koin:koin-annotations:1.3.0",
     "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-annotations-1.3.0-commonMain-SIIkjg.klib",
-    "sourceSetName": "commonMain"
-  },
-  {
-    "moduleId": "module io.insert-koin:koin-compose-viewmodel:1.2.0-Beta4",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-compose-viewmodel-1.2.0-Beta4-commonMain-jKScNQ.klib",
     "sourceSetName": "commonMain"
   },
   {
@@ -100,28 +105,28 @@
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module co.touchlab:stately-concurrency:2.0.6",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\co.touchlab-stately-concurrency-2.0.6-commonMain-CAw19g.klib",
+    "moduleId": "module org.jetbrains.compose.runtime:runtime:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.runtime-runtime-1.7.0-alpha03-commonMain-Prcw9g.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module co.touchlab:stately-concurrent-collections:2.0.6",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\co.touchlab-stately-concurrent-collections-2.0.6-commonMain-cAetxQ.klib",
+    "moduleId": "module io.insert-koin:koin-core-viewmodel:4.0.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-core-viewmodel-4.0.0-commonMain-H79fAg.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.runtime:runtime:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.runtime-runtime-1.6.10-rc03-commonMain-CVJWAg.klib",
+    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-compose-2.8.0-commonMain-207ecg.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-compose-2.8.0-rc03-commonMain-207ecg.klib",
+    "moduleId": "module io.insert-koin:koin-core-viewmodel-navigation:4.0.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\io.insert-koin-koin-core-viewmodel-navigation-4.0.0-commonMain-7vDszA.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha06",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-compose-2.7.0-alpha06-commonMain-_VVO-g.klib",
+    "moduleId": "module org.jetbrains.androidx.navigation:navigation-compose:2.8.0-alpha09",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-compose-2.8.0-alpha09-commonMain-x_0rGg.klib",
     "sourceSetName": "commonMain"
   },
   {
@@ -130,8 +135,8 @@
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.1",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-serialization-core-1.6.1-commonMain-MFMYCQ.klib",
+    "moduleId": "module org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.2",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-kotlinx-serialization-core-1.6.2-commonMain-0z2eOA.klib",
     "sourceSetName": "commonMain"
   },
   {
@@ -140,163 +145,63 @@
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-common:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-common-2.8.0-rc03-nonJvmMain-_oGBew.klib",
-    "sourceSetName": "nonJvmMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-common:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-common-2.8.0-rc03-commonMain-_oGBew.klib",
+    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel:2.8.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-2.8.0-commonMain-ydSu5Q.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-2.8.0-rc03-nativeMain-ydSu5Q.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-2.8.0-rc03-nonJvmMain-ydSu5Q.klib",
-    "sourceSetName": "nonJvmMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-2.8.0-rc03-commonMain-ydSu5Q.klib",
+    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-savedstate-2.8.0-commonMain-KnkPTw.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-savedstate-2.8.0-rc03-jbMain-KnkPTw.klib",
-    "sourceSetName": "jbMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-viewmodel-savedstate-2.8.0-rc03-commonMain-KnkPTw.klib",
+    "moduleId": "module org.jetbrains.androidx.core:core-bundle:1.0.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.core-core-bundle-1.0.0-commonMain-cb_PMQ.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.savedstate:savedstate:1.2.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.savedstate-savedstate-1.2.0-rc03-nonJvmMain-xMdm-g.klib",
-    "sourceSetName": "nonJvmMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.savedstate:savedstate:1.2.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.savedstate-savedstate-1.2.0-rc03-commonMain-xMdm-g.klib",
+    "moduleId": "module org.jetbrains.androidx.savedstate:savedstate:1.2.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.savedstate-savedstate-1.2.0-commonMain-xMdm-g.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.runtime:runtime-saveable:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.runtime-runtime-saveable-1.6.10-rc03-commonMain-pCPplQ.klib",
+    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-common:2.8.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-common-2.8.0-commonMain-_oGBew.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.ui:ui:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-1.6.10-rc03-uikitMain-BVAqnw.klib",
-    "sourceSetName": "uikitMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-1.6.10-rc03-darwinMain-BVAqnw.klib",
-    "sourceSetName": "darwinMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-1.6.10-rc03-nativeMain-BVAqnw.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-1.6.10-rc03-jsNativeMain-Eh674w.klib",
-    "sourceSetName": "jsNativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-1.6.10-rc03-skikoMain-Eh674w.klib",
-    "sourceSetName": "skikoMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-1.6.10-rc03-commonMain-Eh674w.klib",
+    "moduleId": "module org.jetbrains.compose.runtime:runtime-saveable:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.runtime-runtime-saveable-1.7.0-alpha03-commonMain-dToAUQ.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.core:core-bundle:1.0.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.core-core-bundle-1.0.0-rc03-nativeMain-cb_PMQ.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.core:core-bundle:1.0.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.core-core-bundle-1.0.0-rc03-jbMain-cb_PMQ.klib",
-    "sourceSetName": "jbMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.core:core-bundle:1.0.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.core-core-bundle-1.0.0-rc03-commonMain-cb_PMQ.klib",
+    "moduleId": "module org.jetbrains.compose.ui:ui:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-1.7.0-alpha03-commonMain-TEPV3A.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-runtime:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-runtime-2.8.0-rc03-nativeMain-Cd-IGw.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-runtime:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-runtime-2.8.0-rc03-nonJvmMain-Cd-IGw.klib",
-    "sourceSetName": "nonJvmMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-runtime:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-runtime-2.8.0-rc03-commonMain-Cd-IGw.klib",
+    "moduleId": "module org.jetbrains.androidx.navigation:navigation-common:2.8.0-alpha09",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-common-2.8.0-alpha09-commonMain-u1QZpQ.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.navigation:navigation-common:2.7.0-alpha06",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-common-2.7.0-alpha06-darwinMain-lKvdpQ.klib",
-    "sourceSetName": "darwinMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.navigation:navigation-common:2.7.0-alpha06",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-common-2.7.0-alpha06-nativeMain-MNIAkQ.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.navigation:navigation-common:2.7.0-alpha06",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-common-2.7.0-alpha06-jbMain-MNIAkQ.klib",
-    "sourceSetName": "jbMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.navigation:navigation-common:2.7.0-alpha06",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-common-2.7.0-alpha06-commonMain-MNIAkQ.klib",
+    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-runtime:2.8.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-runtime-2.8.0-commonMain-Cd-IGw.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.navigation:navigation-runtime:2.7.0-alpha06",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-runtime-2.7.0-alpha06-nonJvmMain-GH9lnw.klib",
-    "sourceSetName": "nonJvmMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.navigation:navigation-runtime:2.7.0-alpha06",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-runtime-2.7.0-alpha06-jbMain-GH9lnw.klib",
-    "sourceSetName": "jbMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.androidx.navigation:navigation-runtime:2.7.0-alpha06",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-runtime-2.7.0-alpha06-commonMain-GH9lnw.klib",
+    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose:2.8.0",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-runtime-compose-2.8.0-commonMain-mvP4Vw.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.animation:animation:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-1.6.10-rc03-nativeMain-tpXTFg.klib",
-    "sourceSetName": "nativeMain"
+    "moduleId": "module org.jetbrains.androidx.navigation:navigation-runtime:2.8.0-alpha09",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.navigation-navigation-runtime-2.8.0-alpha09-commonMain-uQyv-Q.klib",
+    "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.animation:animation:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-1.6.10-rc03-jsNativeMain-5jNXZw.klib",
-    "sourceSetName": "jsNativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.animation:animation:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-1.6.10-rc03-commonMain-5jNXZw.klib",
+    "moduleId": "module org.jetbrains.compose.animation:animation:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-1.7.0-alpha03-commonMain-td6DJg.klib",
     "sourceSetName": "commonMain"
   },
   {
@@ -305,193 +210,53 @@
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.annotation-internal:annotation:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.annotation-internal-annotation-1.6.10-rc03-nonJvmMain-cNNKSA.klib",
-    "sourceSetName": "nonJvmMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.annotation-internal:annotation:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.annotation-internal-annotation-1.6.10-rc03-commonMain-cNNKSA.klib",
+    "moduleId": "module org.jetbrains.compose.annotation-internal:annotation:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.annotation-internal-annotation-1.7.0-alpha03-commonMain-BD0V2w.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose:2.8.0-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.androidx.lifecycle-lifecycle-runtime-compose-2.8.0-rc03-commonMain-mvP4Vw.klib",
+    "moduleId": "module org.jetbrains.compose.ui:ui-geometry:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-geometry-1.7.0-alpha03-commonMain-CwQ9Eg.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.collection-internal:collection:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.collection-internal-collection-1.6.10-rc03-jsNativeMain-hcu3Ug.klib",
-    "sourceSetName": "jsNativeMain"
+    "moduleId": "module org.jetbrains.compose.ui:ui-graphics:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-graphics-1.7.0-alpha03-commonMain-jV-3Nw.klib",
+    "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.collection-internal:collection:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.collection-internal-collection-1.6.10-rc03-jbMain-hcu3Ug.klib",
+    "moduleId": "module org.jetbrains.compose.ui:ui-text:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-text-1.7.0-alpha03-commonMain-x909gw.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.compose.ui:ui-unit:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-unit-1.7.0-alpha03-commonMain-pR3KgA.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.compose.ui:ui-util:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-util-1.7.0-alpha03-commonMain-3-t5Ow.klib",
+    "sourceSetName": "commonMain"
+  },
+  {
+    "moduleId": "module org.jetbrains.compose.collection-internal:collection:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.collection-internal-collection-1.7.0-alpha03-jbMain-5apXgA.klib",
     "sourceSetName": "jbMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.collection-internal:collection:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.collection-internal-collection-1.6.10-rc03-commonMain-hcu3Ug.klib",
+    "moduleId": "module org.jetbrains.compose.collection-internal:collection:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.collection-internal-collection-1.7.0-alpha03-commonMain-5apXgA.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.ui:ui-geometry:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-geometry-1.6.10-rc03-commonMain-zDj2GQ.klib",
+    "moduleId": "module org.jetbrains.compose.animation:animation-core:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-core-1.7.0-alpha03-commonMain-KAIxIA.klib",
     "sourceSetName": "commonMain"
   },
   {
-    "moduleId": "module org.jetbrains.compose.ui:ui-graphics:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-graphics-1.6.10-rc03-nativeMain-M9RlEw.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-graphics:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-graphics-1.6.10-rc03-skikoExcludingWebMain-jqr5iw.klib",
-    "sourceSetName": "skikoExcludingWebMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-graphics:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-graphics-1.6.10-rc03-jsNativeMain-jqr5iw.klib",
-    "sourceSetName": "jsNativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-graphics:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-graphics-1.6.10-rc03-skikoMain-jqr5iw.klib",
-    "sourceSetName": "skikoMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-graphics:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-graphics-1.6.10-rc03-commonMain-jqr5iw.klib",
-    "sourceSetName": "commonMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-text:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-text-1.6.10-rc03-darwinMain-DK5x5Q.klib",
-    "sourceSetName": "darwinMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-text:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-text-1.6.10-rc03-nativeMain-DK5x5Q.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-text:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-text-1.6.10-rc03-jsNativeMain-aUvkxg.klib",
-    "sourceSetName": "jsNativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-text:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-text-1.6.10-rc03-skikoMain-aUvkxg.klib",
-    "sourceSetName": "skikoMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-text:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-text-1.6.10-rc03-commonMain-aUvkxg.klib",
-    "sourceSetName": "commonMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-uikit:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-uikit-1.6.10-rc03-uikitMain-DC3XFw.klib",
-    "sourceSetName": "uikitMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-unit:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-unit-1.6.10-rc03-jsNativeMain-vwDMdg.klib",
-    "sourceSetName": "jsNativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-unit:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-unit-1.6.10-rc03-jbMain-vwDMdg.klib",
-    "sourceSetName": "jbMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-unit:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-unit-1.6.10-rc03-commonMain-vwDMdg.klib",
-    "sourceSetName": "commonMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-util:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-util-1.6.10-rc03-uikitMain-4Hpl6Q.klib",
-    "sourceSetName": "uikitMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.ui:ui-util:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.ui-ui-util-1.6.10-rc03-commonMain-LLOBPg.klib",
-    "sourceSetName": "commonMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.kotlinx:atomicfu:0.23.2",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-atomicfu-0.23.2-nativeMain-yBS35w.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.kotlinx:atomicfu:0.23.2",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.kotlinx-atomicfu-0.23.2-commonMain-yBS35w.klib",
-    "sourceSetName": "commonMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.skiko:skiko:0.8.4",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.skiko-skiko-0.8.4-iosMain-1T2ZCw.klib",
-    "sourceSetName": "iosMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.skiko:skiko:0.8.4",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.skiko-skiko-0.8.4-darwinMain-1T2ZCw.klib",
-    "sourceSetName": "darwinMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.skiko:skiko:0.8.4",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.skiko-skiko-0.8.4-nativeMain-DbI_Jg.klib",
-    "sourceSetName": "nativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.skiko:skiko:0.8.4",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.skiko-skiko-0.8.4-nativeJsMain-DbI_Jg.klib",
-    "sourceSetName": "nativeJsMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.skiko:skiko:0.8.4",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.skiko-skiko-0.8.4-commonMain-DbI_Jg.klib",
-    "sourceSetName": "commonMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.animation:animation-core:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-core-1.6.10-rc03-uikitMain-2J6wbg.klib",
-    "sourceSetName": "uikitMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.animation:animation-core:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-core-1.6.10-rc03-jsNativeMain-jNz1Aw.klib",
-    "sourceSetName": "jsNativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.animation:animation-core:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-core-1.6.10-rc03-jbMain-jNz1Aw.klib",
-    "sourceSetName": "jbMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.animation:animation-core:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.animation-animation-core-1.6.10-rc03-commonMain-jNz1Aw.klib",
-    "sourceSetName": "commonMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.foundation:foundation-layout:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.foundation-foundation-layout-1.6.10-rc03-uikitMain-BKR0pA.klib",
-    "sourceSetName": "uikitMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.foundation:foundation-layout:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.foundation-foundation-layout-1.6.10-rc03-skikoMain-89e7lw.klib",
-    "sourceSetName": "skikoMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.foundation:foundation-layout:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.foundation-foundation-layout-1.6.10-rc03-jsNativeMain-89e7lw.klib",
-    "sourceSetName": "jsNativeMain"
-  },
-  {
-    "moduleId": "module org.jetbrains.compose.foundation:foundation-layout:1.6.10-rc03",
-    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.foundation-foundation-layout-1.6.10-rc03-commonMain-89e7lw.klib",
+    "moduleId": "module org.jetbrains.compose.foundation:foundation-layout:1.7.0-alpha03",
+    "file": "D:\\AndroidStudioProjects\\CryptoApp\\shared\\build\\kotlinTransformedMetadataLibraries\\commonMain\\org.jetbrains.compose.foundation-foundation-layout-1.7.0-alpha03-commonMain-Nkt8ew.klib",
     "sourceSetName": "commonMain"
   },
   {

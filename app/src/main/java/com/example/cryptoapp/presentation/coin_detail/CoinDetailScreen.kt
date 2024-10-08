@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -55,12 +56,11 @@ fun CoinDetailScreen(
 ) {
     val coinTickerState = coinTickerViewModel.state.value
     val coinDetailState = coinDetailViewModel.state.value
-
-
+    
     if (coinDetailState.coin.isNotNull()) {
         Scaffold(
             bottomBar = {
-                Divider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
+                HorizontalDivider(thickness = 1.dp, color = MaterialTheme.colorScheme.onBackground)
                 CryptoAppBottomNavBar(
                     modifier = Modifier
                         .height(80.dp)
@@ -127,7 +127,6 @@ fun CoinDetailScreen(
                             fontSize = 14.sp,
                             fontFamily = Chakrapetch
                         )
-
                     )
                     Row {
                         val price = coinTicker?.quotes?.usd?.price
@@ -155,7 +154,10 @@ fun CoinDetailScreen(
                             )
                         }
                     }
-                    Divider(color = MaterialTheme.colorScheme.onBackground, thickness = 1.dp)
+                    HorizontalDivider(
+                        thickness = 1.dp,
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
                     // Tabs
                     CoinDetailTabs()
                 }

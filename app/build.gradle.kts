@@ -3,9 +3,7 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.ksp)
-    
-//    id("kotlin-kapt")
-//    id("com.google.dagger.hilt.android")
+    alias(libs.plugins.jetbrainsCompose)
 }
 
 android {
@@ -88,21 +86,18 @@ dependencies {
     // Coroutine Lifecycle Scopes
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.runtime.ktx)
-
-    //Dagger - Hilt
-//    implementation (libs.hilt.android)
-//    kapt (libs.hilt.android.compiler)
-//    kapt (libs.androidx.hilt.compiler)
-//    implementation (libs.androidx.hilt.navigation.compose)
     
-    implementation(platform("io.insert-koin:koin-bom:3.5.3"))
-    implementation("io.insert-koin:koin-core")
-    implementation("io.insert-koin:koin-android")
-    implementation("io.insert-koin:koin-compose-viewmodel:1.2.0-Beta4")
+    
+    implementation(libs.koin.bom)
+    implementation(libs.koin.core)
+    implementation(libs.koin.compose)
+    implementation(libs.koin.compose.viewmodel)
+    implementation(libs.koin.compose.navigation)
+    implementation(libs.koin.android)
     
     // Annotations
-    implementation("io.insert-koin:koin-annotations:1.3.0")
-    ksp("io.insert-koin:koin-ksp-compiler:1.3.0")
+    implementation(libs.koin.annotations)
+    ksp(libs.koin.ksp.compiler)
 
     //Coil
     implementation(libs.coil.compose)

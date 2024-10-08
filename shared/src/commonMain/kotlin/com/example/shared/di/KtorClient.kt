@@ -1,6 +1,5 @@
 package com.example.shared.di
 
-import androidx.lifecycle.SavedStateHandle
 import com.example.shared.data.remote.KtorCoinPaprikaApiImpl
 import com.example.shared.presentation.viewmodels.CoinDetailViewModel
 import com.example.shared.presentation.viewmodels.CoinEventsViewModel
@@ -19,6 +18,7 @@ import io.ktor.http.HttpHeaders
 import io.ktor.http.headers
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
+import org.koin.compose.viewmodel.dsl.viewModel
 import org.koin.compose.viewmodel.dsl.viewModelOf
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
@@ -45,15 +45,15 @@ val appModule = module {
 		}
 	}
 	singleOf(::KtorCoinPaprikaApiImpl)
-	single { SavedStateHandle }
+	
 }
 
 val viewModelModules = module {
-	viewModelOf(::CoinDetailViewModel)
-	viewModelOf(::CoinEventsViewModel)
-	viewModelOf(::CoinMarketsViewModel)
+	viewModel { CoinDetailViewModel(get(), get())  }
+	viewModel { CoinEventsViewModel(get(), get())  }
+	viewModel { CoinMarketsViewModel(get(), get())  }
+	viewModel { CoinTickerViewModel(get(), get())  }
+	viewModel { CoinTodayDetailViewModel(get(), get())  }
 	viewModelOf(::CoinsListViewModel)
-	viewModelOf(::CoinTickerViewModel)
-	viewModelOf(::CoinTodayDetailViewModel)
 	viewModelOf(::CoinToolsViewModel)
 }

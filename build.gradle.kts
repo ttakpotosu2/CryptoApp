@@ -5,9 +5,7 @@ buildscript {
     }
 
     dependencies {
-
         classpath (libs.gradle)
-//        classpath (libs.hilt.android.gradle.plugin)
     }
 }
 
@@ -20,5 +18,5 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform).apply(false)
     alias(libs.plugins.compose.compiler).apply(false)
     alias(libs.plugins.ksp).apply(false)
-//    alias(libs.plugins.hiltAndroid).apply(false)
+    alias(libs.plugins.jetbrainsCompose).apply(false)
 }
